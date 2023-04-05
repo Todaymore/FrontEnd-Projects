@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;600;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | News homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
-    body,p,h1
+    body,p,h1,h3
     {
       margin:0;
       padding:0;
@@ -21,21 +23,51 @@
     }
     #container
     {
-       
+      font-family: 'Inter', sans-serif;
     }
+    #headSym
+       {
+        position:absolute;
+       left:5%;
+       top:5%;
+       }
+       
+       #headSec
+       {
+       position:absolute;
+       right:5%;
+       top:5%;    
+       height:20px;
+       margin:0px 0px;
+       width:300px;
+       }
+
+       #headSec li
+       {
+         list-style-type: none;
+         display:inline-block;
+         font-size:11px;
+         margin:0px 0px; 
+         margin-left: 2.78%;
+         color:hsl(236, 13%, 42%);  
+       }
+       
+        #headSec li:hover
+        {
+          color:hsl(5, 85%, 63%);
+        }
     #headSec
     {
-       background-color:brown;
-       border:2px solid gold;
-       position:fixed;
+  
+       position:absolute;
        padding:20px;      
-       right:5%;
-       top:5%;
+      
+       font-weight: 200;
     }
 
     #headSym
     {
-       position:fixed;
+       position:absolute;
        left:5%;
        top:5%;
        font-size:2em;
@@ -46,97 +78,215 @@
     {
        
        display:flex;
-       border:2px solid green;
+     
        margin:12% 5%;
 
     }
     
-    #leftSec
+    #middleLeftSec
     {
-       width: 720px;;
-       border: 2px solid purple;
-       background-color:bisque;
+       width: 740px;;
+       /*use flex grow instead inline for flex child*/
+ 
        margin-right:10px;
     }
 
-    #rightSec
+    
+
+    #middleLeftSec img
     {
-       width:340px;
-       border:2px solid black
+     
+      max-width:730px;
+    }
+    
+    #text
+    {
+      display:flex;
+    }
+    #middleLeftSec h1
+    {
+    
+      max-width:300px;
+      margin-right:40px;
+      font-size:3.1em;
+      padding-left:4px;
+      font-weight:700;
+      margin-top:40px;
+    }
+    #rightText
+    {
+     
+      padding:2px;
+      max-width:350px;
+      font-size:16px;
+      font-weight: 200;
+      margin-top:35px;
+    }
+    #rightText button
+    {
+      margin-top:40px;
+      max-height:50px;
+      max-width:185px;
+      font-size:15px;
+      padding-top:12.5px;
+      padding-bottom:12.5px;
+      padding-left:30px;
+      padding-right:35px;
+      letter-spacing: 2px;
+      background-color:hsl(5, 85%, 63%);
+      color:hsl(36, 100%, 99%);
     }
 
+    #middleRightSec
+    {
+       width:600px;
+       border:2px solid black;
+       padding-left:30px;
+       padding-right:40px;
+       color:hsl(36, 100%, 99%);
+       background-color:black;
+    }
+
+    #down
+    {
     
+       display:flex;
+       margin-left:5%;
+       margin-right:5%;
+    }
+    #down img
+    {
+      max-height:130px;
+      max-width:100px; 
+    }
+
+    #down p
+    {
+      font-size:10px;
+    }
+    
+    #one,#two,#three
+    {
+     
+
+      max-height:134px;
+      
+      
+      display:flex;
+      width: 380px;
+      flex-wrap:wrap;  
+      flex-direction:column;
+      box-sizing:border-box;
+    }
+
+    #one h1, #one p, #one h3
+    {
+       
+       white-space:nowrap;
+    }
+
+    #down h3:hover
+    {
+      color:hsl(5, 85%, 63%);
+    }
+   
   </style>
 </head>
 <body>
 <div id="container">
   
-  <div id="headSec">
-  
-  <p>
-  Home
-  New
-  Popular
-  Trending
-  Categories
-  </p>
-  <div id="headSym">
-  <p>W.</p>
-  </div> <!--closing of headSym div-->
-  </div> <!--closing of headsec div-->
-  
-
+  <div id="container">
+    <div id="headSym">
+        <img src="assets\images\logo.svg" alt="image of W-Dot"/>
+        </div> <!--closing of headSym div-->
+    <div id="headSec">
+    <ul>
+     <li>Home</li> 
+     <li>New</li>
+     <li>Popular</li>
+     <li>Trending</li>
+     <li>Categories</li>  
+    </ul>
+    
+    </div> <!--closing of headsec div-->
 
   <div id="middleSec">
 
-  <div id="leftSec">
- 
-
-    <img src="C:\Users\Indif\OneDrive\Documents\GitHub\FrontEnd-Projects\news-homepage-main\assets\images\image-web-3-desktop.jpg"
+  <div id="middleLeftSec">
+    <img src="assets\images\desktop.jpg"
          alt="mainImage"/>
+
+  <div id="text">
   <h1>The Bright Future of Web 3.0?</h1>
+  <div id="rightText">
   <p>
   We dive into the next evolution of the web that claims to put the power 
   of the platforms back into the hands of the people. But is it 
   really fulfilling its promise?
   </p>
+  <button>
+    READ MORE
+  </button>
+</div>  <!--closing of rightText-->
+</div>  <!--closing of text-->
+</div>  <!--closing of  middleLeftSec div-->
 
-  Read more
-</div>  <!--closing of  leftSec div-->
+ <div id="middleRightSec">
+  <h1>New</h1>
+  <article id="new1">
+    <h3>Hydrogen VS Electric Cars</h3>
+    <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+    <br/>
+    <br/>
+  </article>
 
- <div id="rightSec">
-  New 
+  <article id="new2">
+    <h3>The Downsides of AI Artistry</h3>
+    <p>What are the possible adverse 
+       effects of on-demand AI image generation?</p>
+  </article>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-</div> <!--closing of rightSec  div-->
+  <article id="new3">
+    <h3>Is VC Funding Drying Up?</h3>
+    <p>Private funding by VC firms is down 50% YOY.
+        We take a look at what that means.</p>
+  </article>
+  <!-- //use flex grow instead inline for flex child
+  -->
+</div> <!--closing of middleRightSec  div-->
 </div> <!--closing of middleSec div -->
-<img src="C:\Users\Indif\OneDrive\Documents\GitHub\FrontEnd-Projects\news-homepage-main\assets\images\desktop.jpg"
-         alt="mainImage"/>
- <!--
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
+<div id="down">
 
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
+<div id="one">
 
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
+<img src="assets\images\one.jpg" alt="image of one"/>
+
+<h1>01</h1>
+<h3>Reviving Retro PCs</h3>
+<p>What happens when old PCs are given modern upgrades?</p>
+
+</div> <!-- closing one-->
+
+<div id="two">
+<img src="assets\images\second.jpg" alt="image of two"/>
+<h1>02</h1>
+<h3>Top 10 Laptops of 2022</h3>
+<p>Our best picks for various <br/> needs and budgets.</p>
+</div> <!--closing two-->
+
+<div id="three">
+  <img src="assets\images\three.jpg" alt="image of three"/>
+  <h1>03</h1>
+  <h3>The Growth of Gaming</h3>
+  <p>How the pandemic has sparked <br/> fresh opportunities.</p>
+</div> <!--closing three-->
+
+</div> <!-- closing of down div-->
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">AtoZhood</a>.
   </div>
--->
 </div> <!--closing of container div-->
 </body>
 </html>
