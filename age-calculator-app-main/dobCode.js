@@ -212,6 +212,6 @@
             document.getElementById("validYear").style.display="inline";
             document.getElementById("validYear").innerHTML="This field is required";
          }
-      alert(day,month,year);
+    
     }
    
