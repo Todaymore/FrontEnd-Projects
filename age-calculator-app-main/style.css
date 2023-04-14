@@ -1,0 +1,217 @@
+body
+{
+    background-color:hsl(0, 0%, 94%);
+}
+
+#container
+{
+    width:840px;
+    height:651px;
+    background-color:hsl(0, 0%, 100%);
+    margin:0 auto;
+    margin-top:5vh;
+    padding-left:57px;
+    padding-top:60px; 
+    padding-right:65px;  
+    border-radius:30px;
+    border-bottom-right-radius:190px;
+}
+
+.firstRow
+{
+    display:inline-block;
+    font-size:10px;
+    letter-spacing:5px; 
+    border:2px solid none;
+    padding-bottom:10px;
+    color:hsl(0, 1%, 44%);
+}
+
+label[for="DD"]
+{  
+    margin-right:153px;
+}
+
+label[for="MM"]
+{
+    margin-right:124px;
+}
+
+.userValue
+{
+    border:1px solid gainsboro;
+    width: 160px;
+    height:71px;
+    border-radius:15px;
+    font-size:32px;
+    padding-left:25px;
+    margin-bottom:50px;
+    color:black;
+    font-weight:700;
+    cursor:pointer;
+}
+
+#logo
+{
+    width:"95px";
+    height:"95px"; 
+    background-color:hsl(259, 100%, 65%);
+    border-radius:95px;
+    position:absolute;
+    left:822px;
+    top:219px;
+    
+}
+
+#logo:hover
+{
+    background-color:black;
+    cursor:pointer;
+}
+#output
+{
+    font-size:85px;
+    margin-top:60px;
+    line-height: 95px;
+    font-weight:800;
+    font-style: italic;
+    color:hsl(0, 0%, 8%);
+}
+
+.userOutput
+{
+    color:hsl(259, 100%, 65%);
+}
+
+button
+{
+    border:none;
+    background-color:white;
+    display:inline-block;
+}
+
+
+#validDay,#validMonth,#validYear
+{
+    font-weight:400;
+    font-style:italic;
+    font-size:10px;
+    color:hsl(0, 100%, 67%); 
+    display:inline-block;
+    position:absolute;
+    top:210px;
+    display:none;
+   
+}
+
+#validMonth
+{
+    left:395px;
+}
+
+#validYear
+{
+    left:590px;
+}
+
+
+
+
+
+@media screen and (max-width:376px)
+{
+    #container
+     {
+       width: 345px;
+       height: 484px;
+       background-color:hsl(0, 0%, 100%);
+       margin:0 auto;
+       margin-top:5vh;
+       padding-left:25px;
+       padding-top:53px; 
+       padding-right:25px;  
+       border-radius:30px;
+       border-bottom-right-radius:190px;
+     }
+
+
+    .firstRow
+    {
+      display:inline-block;
+      font-size:10px;
+      letter-spacing:2px; 
+      border:2px solid none;
+      padding-bottom:5px;
+      color:hsl(0, 1%, 44%);
+    }
+
+    label[for="DD"]
+    {  
+      margin-right:65px;
+    }
+
+    label[for="MM"]
+    {
+      margin-right:46px;
+    }
+
+   .userValue
+   {
+      border:1px solid gainsboro;
+      width: 75px;
+      height:51px;
+      border-radius:9px;
+      font-size:15px;
+      padding-left:15px;
+      margin-bottom:50px;
+      color:black;
+      font-weight:700;
+      cursor:pointer;
+   }
+
+   #logo
+    {
+        width:"63px";
+        height:"63px";
+        background-color:hsl(259, 100%, 65%);
+        border-radius:95px;
+        position:absolute;
+        left:140px;
+        top:182px;
+    }
+   
+   #output
+   {
+        font-size:40px;
+        margin-top:30px;
+        line-height: 50px;
+        font-weight:800;
+        font-style: italic;
+        color:hsl(0, 0%, 8%);
+    }
+
+
+    #validDay,#validMonth,#validYear
+    {
+        font-weight:400;
+        font-style:italic;
+        font-size:8px;
+        color:hsl(0, 100%, 67%); 
+        display:inline-block;
+        position:absolute;
+        top:170px;
+        display:none; 
+    }
+
+    #validMonth
+    {
+        left:140px;
+    }
+
+    #validYear
+    {
+        left:240px;
+    }
+
+
+}
