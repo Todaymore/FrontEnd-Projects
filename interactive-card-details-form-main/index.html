@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!--linking css spreadsheet-->
+  <link rel="stylesheet" href="Reset.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  
+
+  <!--linking google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"/>
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  
+ 
+</head>
+<body>
+<div id="container">
+  <div id="numOnCard">0000 0000 0000 0000</div>
+  <div id="nameOnCard">Jane Appleseed</div>
+  <div id="dateOnCard">00/00</div>
+  <div id="cvcOnCard">000</div>
+  
+
+
+  <img src="images/bg-card-front.png" id="frontSide" alt="front side of Card"/>
+  <img src="images/bg-card-back.png"  id="backSide" alt="back side of Card"/>
+
+  <div id="darkBack">
+
+</div>
+<div id="bigCircle"></div>
+<div id="smallCircle"></div>
+<div id="cardFront">
+
+</div>
+<div id="cardBack">
+
+  <div id="thankYou">
+
+    <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+    <br/>
+    
+    <span id="thanks" >THANK YOU!</span> <br/>
+    <span style="color:hsl(279, 6%, 55%);">We've added your card details</span>
+    <button onClick="window.location.reload()" style="margin-top:50px;">Continue</button>
+  </div>
+
+  
+<form id="userArea" method="get">
+
+  <label for="name">Cardholder Name</label><br/>
+  <input type="text" name="name" id="name" 
+   placeholder="e.g. Jane Appleseed" onfocusout="copyName()"/>   <br/>
+
+   <div id="nameError">Can't be blank</div><!--for empty and wrong format fields-->
+   
+
+
+  <label for="cardNo">Card Number</label>  <br/>
+  <input type="text" name="cardNo" id="cardNo"
+   placeholder=" e.g. 1234 5678 9123 0000" onfocusout="copyCardNo()"/> <br/> <!-- can be use this attribute for better control pattern="[0-9a-zA-z]{4}[' '] [0-9a-zA-z]{4}[' '] [0-9a-zA-z]{4}[' '] [0-9a-zA-z]{4}[' ']" -->
+   
+    <div id="cardNumError">Can't be blank</div><!--for empty and wrong format fields-->
+
+
+
+   <label for="MM">Exp. Date (MM/YY)</label>
+   <label for="Cvc">CVC</label> <br/>
+
+   <input type="text" name="MM" id="MM" placeholder="MM" onfocusout="copyMonth()"/>
+   <input type="text" name="YY" id="YY" placeholder="YY" onfocusout="copyYear()"/>
+
+   <div id="dateError">Can't be blank</div><!--for empty and wrong format fields-->
+
+   <input type="text" name="Cvc" id="Cvc" placeholder="e.g. 123" onfocusout="copyCvc()" /><br/>
+
+   <div id="cvcError">Can't be blank</div><!--for empty and wrong format fields-->
+
+
+
+  <p  onclick="checkBefore()">  Confirm</p>
+
+</form>
+  
+</div>
+
+</div> <!--end of container tag-->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Today More</a>.
+  </div>
+
+  <script src="addJS.js"></script>
+</body>
+</html>

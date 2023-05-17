@@ -1,0 +1,597 @@
+#container
+{
+    width:1440px;
+    height:900px;
+    border:2px solid white;
+    color:hsl(278, 68%, 11%);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#darkBack
+{
+    width:443px;
+    height:900px;
+    
+    background-image:linear-gradient(to bottom right , hsl(278, 68%, 11%)10%  ,hsl(278, 94%, 30%) ,hsl(249, 99%, 64%) ,hsl(278, 68%, 11%) 55%  );
+}
+
+#backSide,#frontSide
+{
+    position:absolute;
+    z-index:2;
+}
+
+#frontSide
+{
+    top:187px;
+    left:164px;
+}
+
+#backSide
+{
+    top:468px;
+    left:257px;
+}
+
+/*writing pre details on Card Images */
+#numOnCard,#nameOnCard,#dateOnCard,#cvcOnCard
+{
+     position:absolute;
+     z-index:3;
+     color:white;
+}
+
+#numOnCard
+{
+    top: 332px;
+    left: 201px;
+    font-size:33px;
+}
+
+#nameOnCard
+{
+    top:390px;
+    left:201px;
+     
+}
+
+#dateOnCard
+{
+    top:390px;
+    left:527px
+
+}
+
+
+
+#cvcOnCard
+{
+    top:581px;
+    left:614px;
+}
+
+#cardFront, #cardBack
+{
+    width:447px;
+    height:245px;
+    position:absolute;
+    background-color:blue;
+    border-radius:15px;
+}
+
+#cardFront
+{
+    top:187px;
+    left:164px;
+}
+
+ #bigCircle
+{
+    background-color:white;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    position:absolute;
+    z-index: 4;
+    bottom:254px;
+    left:194px;
+}
+#smallCircle
+{
+    width:22px; /*20px is correct */
+    height:22px;
+    border:1px solid white;
+    border-radius:50%;
+    position:absolute;
+    z-index:4;
+    bottom:269px;
+    left:256px;
+}
+
+#cardBack
+{
+    top:468px;
+    left:257px;
+}
+
+#userArea
+{
+    position:absolute;
+    border:1px solid white;
+    height:352px;
+    width:385px;
+    left:573px;
+    top:-191px;
+}
+
+ #userArea label
+{
+    display:inline-block;
+    border: 1px solid white;
+    margin-bottom:8px;  
+    font-size:10px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    font-weight:800;
+
+    
+}
+
+#name, #cardNo
+{
+    width:100%;
+}
+
+#MM,#YY
+{
+  
+  width:80px;
+}
+
+#MM
+{
+    margin-right: 8px;
+}
+
+#YY
+{
+    margin-right:18px;
+}
+
+#Cvc
+{
+    width:185px;
+    
+}
+
+label[for*="Cvc"]
+{
+    margin-left:61px;
+}
+
+#userArea input
+{
+    display:inline-block;
+    padding:12px 15px;
+    margin-bottom:25px;
+    font-size:18px;
+    border-radius:7px;
+    box-sizing: border-box;
+    color:hsl(270, 3%, 87%);
+    border:1px solid hsl(270, 3%, 87%);
+    
+}
+
+
+
+::placeholder /*change color of placeholder text*/
+{
+    color:hsl(270, 3%, 87%);
+    font-family: 'Space Grotesk', sans-serif;
+}
+#userArea p, #thankYou button
+{
+    box-sizing:border-box;
+    width:100%;
+    padding:18px 15px;
+    margin-top:18px;
+    font-size:18px;
+    border-radius:8px;
+    color:white;
+    background-color:hsl(278, 68%, 11%);
+    font-family: 'Space Grotesk', sans-serif;
+    text-align:center;
+   
+
+}
+
+#userArea input:hover
+{
+    cursor:pointer;
+    border:1px solid hsl(249, 99%, 64%);
+}
+
+#userArea input:focus
+{
+    color:hsl(278, 68%, 11%);
+  
+    outline:1px solid hsl(249, 99%, 64%);
+   
+}
+
+
+
+/*for errors and empty fields*/
+  #nameError,
+  #cardNumError,
+  #dateError,
+  #cvcError
+  {
+    color:red;
+    font-size:12px;
+    position:absolute;
+    display:none;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  #nameError
+  {
+    top:80px;
+  }
+
+  #cardNumError
+  {
+    top:195px;
+  }
+
+  #dateError
+  {
+    top:310px;
+  }
+
+  #cvcError
+  {
+    top:310px;
+    left:195px;
+  }
+
+  #thankYou
+  {
+    
+    width:385px;
+    text-align:center;
+    position:absolute;
+    left:573px;
+    top:-143px;;
+    display:block;;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size:18px;
+    display:none;
+  }
+  #thanks
+  {
+    font-size:33px;
+   display:inline-block; 
+   margin-top:40px; 
+  margin-bottom:30px;
+  }
+  
+  #thankYou button
+  {
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+
+ 
+
+  @media only screen and (max-width: 376px) 
+  {
+   
+     #container
+     {
+         width:374px;
+         height:704px;
+         border:1px solid white;
+         color:hsl(278, 68%, 11%);
+         font-family: 'Space Grotesk', sans-serif;
+         box-sizing:border-box;
+     }
+     
+     #darkBack
+     {
+         width:100%;
+         height:240px;
+         background-color:hsl(278, 68%, 11%);
+     }
+     
+     #backSide,#frontSide
+     {
+         position:absolute;
+         z-index:2;
+         width:285px;
+         height:160px;
+     }
+     
+     #frontSide
+     {
+         top:125px;
+         left:15px;
+         z-index:3;
+         
+     }
+     
+     #backSide
+     {
+         top: 30px;
+         left: 75px;
+         
+     }
+ 
+     /*writing pre details on Card Images*/ 
+ #numOnCard,#nameOnCard,#dateOnCard,#cvcOnCard
+ {
+      position:absolute;
+      z-index:4;
+      color:white;
+ }
+ 
+ #numOnCard
+ {
+     top: 214px;
+     left: 34px;
+     font-size:22px;
+ }
+ 
+ #nameOnCard
+ {
+     top:251px;
+     left:34px;
+     font-size:14px;
+      
+ }
+ 
+ #dateOnCard
+ {
+     top:253px;
+     left:248px;
+     font-size:12px;
+ }
+ 
+ 
+ 
+ #cvcOnCard
+ {
+    font-size:12px;
+    top:103px;
+    left:295px;
+ }
+    
+     #cardFront,#cardBack
+{
+    top:187px;
+    left:164px;
+    display:block;
+}
+ 
+ 
+ 
+ 
+  #bigCircle
+ {
+     background-color:white;
+     width:30px;
+     height:30px;
+     border-radius:50%;
+     position:absolute;
+     z-index: 4;
+     top:142px;
+     left:33px;
+     
+ }
+ 
+ #smallCircle
+ {
+     width:16px; /*//20px is correct*/ 
+     height:16px;
+     border:1px solid white;
+     border-radius:50%;
+     position:absolute;
+     z-index:4;
+     top:150px;
+     left:75px;
+     
+     
+ }
+
+ #cardFront, #cardBack
+{
+    width:100px;
+    height:50px;
+    position:absolute;
+    background-color:blue;;
+    border-radius:15px;
+    
+}
+ /*
+ everything okay till here*/
+ 
+ 
+ #userArea
+ {
+     position:absolute;
+     border:1px solid white;
+     margin: 4px 22px;
+     height:360px;
+     width:332px;
+     left:-165px;
+     top:180px;
+     display:block;
+     
+ }
+ 
+  #userArea label
+ {
+     display:inline-block;
+     border: 1px solid white;
+     margin-bottom:10px;  
+     font-size:10px;
+     text-transform: uppercase;
+     letter-spacing:2px;
+     font-weight:800;
+ 
+     
+ }
+ 
+ #name, #cardNo
+ {
+     width:100%;
+ }
+ 
+ #MM,#YY
+ {
+   
+   width:72px;
+ }
+ 
+ #MM
+ {
+     margin-right: 7px;
+ }
+ 
+ #YY
+ {
+     margin-right:9px;
+ }
+ 
+ #Cvc
+ {
+     width:156px;
+     margin-left:2px;
+     
+ }
+ 
+ label[for*="Cvc"]
+ {
+     margin-left:39px;
+ }
+ 
+ #userArea input
+ {
+     display:inline-block;
+     padding:12px 15px;
+     margin-bottom:20px;
+     font-size:18px;
+     border-radius:7px;
+     box-sizing: border-box;
+     color:hsl(270, 3%, 87%);
+     border:1px solid hsl(270, 3%, 87%);
+     
+ }
+ 
+ 
+ 
+ ::placeholder /*//change color of placeholder text*/ 
+ {
+     color:hsl(270, 3%, 87%);
+     font-family: 'Space Grotesk', sans-serif;
+ }
+ #userArea p, #thankYou button
+ {
+     box-sizing:border-box;
+     width:100%;
+     padding:18px 15px;
+     margin-top:5px;
+     font-size:18px;
+     border-radius:8px;
+     color:white;
+     background-color:hsl(278, 68%, 11%);
+     font-family: 'Space Grotesk', sans-serif;
+     text-align:center;
+     
+    
+ 
+ }
+ 
+ #userArea input:hover
+ {
+     cursor:pointer;
+     border:1px solid hsl(249, 99%, 64%);
+ }
+ 
+ #userArea input:focus
+ {
+     color:hsl(278, 68%, 11%);
+   
+     outline:1px solid hsl(249, 99%, 64%);
+    
+ }
+ 
+ /*
+ for errors and empty fields*/
+   #nameError,
+   #cardNumError,
+   #dateError,
+   #cvcError
+   {
+     color:red;
+     font-size:12px;
+     position:absolute;
+     display:none;
+     font-family: 'Space Grotesk', sans-serif;
+   }
+ 
+   #nameError
+   {
+     top:75px;
+ 
+   }
+ 
+   #cardNumError
+   {
+     top:190px;
+   }
+ 
+   #dateError
+   {
+     
+    top:0px;
+   
+   }
+ 
+   #cvcError
+   {
+     top:7px;
+     left:195px;
+    
+     
+   }
+ 
+   #thankYou
+   {
+     
+     width:332px;
+     text-align:center;
+     position:absolute;
+     margin: 4px 22px;
+     left:-165px;
+     top:180px;
+     display:none;
+     font-family: 'Space Grotesk', sans-serif;
+     font-size:18px;
+     
+   }
+ 
+   #thanks
+   {
+     font-size:25px; 
+     display:inline-block; 
+     margin-top:40px; 
+     
+   }
+   #thankYou button
+   {
+     padding-top:15px;
+     padding-bottom:15px;
+   }
+ 
+ }
