@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="reset.css"/>
+  <link rel="stylesheet" href="style.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+  
+  </style>
+</head>
+<body>
+<div id="outerContainer">
+<div id="mainHeading"><h1>SPLI <br/>TTER</h1></div>
+<div id="innerContainer">
+  
+  <div id="left">
+  <form action="#" method="post">
+
+    <label for="billPay">Bill</label> 
+    <span class="error" id="amtError">Can't be zero</span><br/>
+    <input type="text" id="billPay" name="billPay" onfocusout="getAmount()"  placeholder="0"/>
+    <br/> <br/>
+
+    <label for="tipSelect">Select Tip %</label><span class="error" id="tipError">Must select One!</span><br/>
+    <br/>
+
+    <h3 onclick="getTip(5),style='background-color:#30b3a5;color:#10555A;'">5%</h3>
+    <h3 onclick="getTip(10),style='background-color:#30b3a5;color:#10555A;'" class="for375">10%</h3>
+    <h3 onclick="getTip(15),style='background-color:#30b3a5;color:#10555A;'" class="lastCol">15%</h3>
+    <h3 onclick="getTip(25),style='background-color:#30b3a5;color:#10555A;'" class="for375">25%</h3>
+    <h3 onclick="getTip(50),style='background-color:#30b3a5;color:#10555A;'">50%</h3>
+    <input type="text" onfocusout="getCustomTip()" class="lastCol" id="custom" placeholder="Custom" class="for375"/>
+
+    <br/> <br/>
+
+    <label for="people"> Number of People</label>
+    
+    <span id="errorPerson">Can't be zero</span>
+    
+    <input type="text" id="people" name="people"  onfocusout="totalPeople()" placeholder="0" />
+      
+    
+  </form>
+  </div> <!--closing left-->
+
+ 
+  <div id="right">
+    <span class="super"> Tip Amount</span>
+    <span class="amount" id="tipAmt">$0.00</span> <br/>
+    <span class="sub">/ person</span> <br/><br/>
+    <span class="super">Total</span>
+    <span class="amount" id="totalAmt">$0.00</span> <br/>
+    <span class="sub">/ person</span> <br/> <br/>
+    <button onClick="splitter(),style='background-color:#9FE8DF;color:#10555A;'">RESET</button>
+  </div> <!--closing right-->
+
+</div> <!--innerContainer-->
+
+  
+</div>  <!--innerContainer-->
+  
+
+  <!--connecting JS file : code.js-->
+  <script src="code.js"></script>
+</body>
+</html>

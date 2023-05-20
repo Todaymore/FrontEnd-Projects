@@ -1,0 +1,566 @@
+body
+{
+  font-family: 'Space Mono', monospace;
+}
+
+#outerContainer
+{
+    width:1440px;
+    height:1024px;
+    background-color:hsl(180, 60%, 81%);
+    border:2px solid white;
+}
+
+#innerContainer
+{
+
+    width:992px;
+    height:592px;
+    background-color:white;
+    border-radius:25px;
+    box-sizing:border-box;
+    display:block;
+    margin-top:302px;
+    margin-left:258px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#mainHeading
+{
+    font-size:20px;
+    color:#375A5C;
+    top:161px;
+    position:absolute;
+    left:48%;
+    letter-spacing:5px
+}
+
+#left
+{
+     width:382px;
+     height:480px;
+     
+     box-sizing:border-box;
+     display:inline-block;
+     margin-top:50px;
+     margin-left:46px;
+     margin-right:46px;
+}
+
+#left h3, #left label, #left input
+{
+    box-sizing:border-box;
+    display:inline-block;
+    border-radius:7px;
+}
+
+#left label
+{
+    box-sizing:border-box;
+    font-size:16px;
+    margin-bottom:12px;
+    color:hsl(186, 14%, 43%);
+   
+}
+
+#left label[for="tipSelect"]
+{
+    margin-bottom:20px;
+}
+
+#left label[for="people"]
+{
+    margin-top:40px;
+}
+
+#left input
+{
+    box-sizing:border-box;
+    width:100%;
+    font-size:24px;
+    padding:10px;
+    background-color:hsl(189, 41%, 97%);
+    color:green;
+    border:2px solid white;
+    text-align:right;
+    
+}
+#left input[placeholder]
+{
+    color:hsl(183, 100%, 15%);
+}
+
+#left input[id="billPay"]
+{
+    margin-bottom:40px;
+}
+
+#left h3
+{
+    font-size:28px;
+    text-align:center;
+    width:116px;
+    border:1px solid white;
+    margin-right:5px;
+    margin-left:0px;
+    margin-bottom:14px;
+    padding-top:11px;
+    padding-bottom:11px;
+    background-color:hsl(183, 100%, 15%);
+    color:white;
+}
+
+
+#left #custom[placeholder]
+{
+    color:hsl(183, 100%, 15%);/*leave it for now and below this*/
+}
+
+#left #custom
+{
+    width:116px;   
+    
+    background-color:white;
+    border:2px solid white;
+    
+    font-size:22px;
+    text-align:center;
+    font-weight:bold;
+    
+    
+}
+
+#left #people
+{
+    background-image:url("images/icon-person.svg");
+    background-repeat:no-repeat;
+    background-position:4% 50%;
+}
+
+#left #billPay
+{
+    background-image:url("images/icon-dollar.svg");
+    background-repeat:no-repeat;
+    background-position:4% 50%;
+}
+#left .lastCol
+{
+    margin-right:0px;
+}
+
+
+
+/*below is active page css for left*/
+#left input:hover, #left h3:hover
+{
+    cursor:pointer;  
+}
+
+#left h3:hover
+{
+    background-color:#30b3a5;
+    color:#10555A;
+}
+
+
+#left input:hover, #left #custom:hover
+{
+    border:2px solid #30b3a5;color:#10555A;
+    outline:none;
+}
+
+/*
+#left h3
+{
+    background-color:#30b3a5;
+}
+*/
+#left input:focus
+{
+    text-align:right;
+    color:#10555A;
+    border:2px solid #30b3a5 !important;
+    outline-color:none;
+}
+
+
+
+/* for #left errors*/
+.error
+{
+    float:right;
+    color:red;
+    font-size:16px;
+    display:none;
+}
+
+#left #errorPerson
+{
+    margin-left:82px;
+    color:red;
+    font-size:16px;
+    display:none;
+}
+
+
+
+
+
+
+/*now for css for #right*/
+#right
+{
+
+    width:414px;
+    height:465px;
+    ;
+    box-sizing:border-box;
+    display:inline-block;
+    margin-top:50px;
+    margin-right:46px;
+    box-sizing:border-box;
+    background-color:hsl(183, 100%, 15%);
+    border-radius:15px;
+}
+
+.super
+{
+    display:inline-block;
+    font-size:16px;
+    margin-left:44px;
+    margin-top:60px;
+    color:white;
+}
+
+.sub
+{
+    font-size:14px;
+    margin-left:44px;
+    color:hsl(186, 14%, 43%);
+}
+
+.amount
+{
+    font-size:37px;
+    float:right;
+    margin-right:44px;
+    margin-top:60px;
+    color:#30b3a5;
+
+}
+
+#right button
+{
+    margin-top:136px;
+    margin-left:44px;
+    width:332px;
+    font-size:20px;
+    font-weight:700;
+    padding-top:15px;
+    padding-bottom:15px;
+    background-color:#086d68;
+    color:#00484B;
+    border-radius:7px;
+    border:none;
+}
+
+
+/* for #right's active page */
+#right button:hover, #right button:hover
+{
+    cursor:pointer;
+    background-color:#9FE8DF;
+    color:#10555A;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 376px)
+{
+
+#outerContainer
+{
+    width:375px;
+    height:970px;
+    background-color:hsl(180, 60%, 81%);
+    border:2px solid white;
+}
+
+#innerContainer
+{
+
+    width:372px;
+    height:970px;
+    background-color:white;
+    border-radius:25px;
+    box-sizing:border-box;
+    display:block;
+    margin-top:145px;
+    margin-left:0px;
+    display:flex;
+    flex-wrap:wrap;
+    border:1px dotted white;
+}
+
+#mainHeading
+{
+    font-size:20px;
+    color:#375A5C;
+    top:48px;
+    position:absolute;
+    left:41%;
+    letter-spacing:5px
+}
+
+#left
+{
+     width:312px;
+     height:536px;
+     
+     box-sizing:border-box;
+     display:inline-block;
+     margin-top:50px;
+     margin-left:29px;
+     margin-right:32px;
+     border:1px solid white;
+}
+
+#left h3, #left label, #left input
+{
+    box-sizing:border-box;
+    display:inline-block;
+    border-radius:7px;
+}
+
+#left label
+{
+    box-sizing:border-box;
+    font-size:16px;
+    margin-bottom:10px;
+    color:hsl(186, 14%, 43%);
+   
+}
+
+#left label[for="tipSelect"]
+{
+    margin-bottom:20px;
+}
+
+#left label[for="people"]
+{
+    margin-top:40px;
+}
+
+#left input
+{
+    box-sizing:border-box;
+    width:100%;
+    font-size:20px;
+    padding:15px;
+    background-color:hsl(189, 41%, 97%);
+    color:green;
+    border:2px solid white;
+    text-align:right;
+    
+}
+#left input[placeholder]
+{
+    color:hsl(183, 100%, 15%);
+}
+
+#left input[id="billPay"]
+{
+    margin-bottom:37px;
+}
+
+#left h3
+{
+    font-size:20px;
+    text-align:center;
+    width:148px;
+    border:1px solid white;
+    margin-right:0px;
+    margin-left:0px;
+    margin-bottom:15px;
+    padding-top:14px;
+    padding-bottom:14px;
+    background-color:hsl(183, 100%, 15%);
+    color:white;
+}
+
+/*#left h3.for375 noNeed
+{
+    margin-right:0px;
+}
+*/
+#left #custom[placeholder]
+{
+    color:hsl(183, 100%, 15%);/*leave it for now and below this*/
+}
+
+#left #custom
+{
+    width:148px;   
+    
+    background-color:white;
+    border:2px solid white;
+    
+    font-size:20px;
+    text-align:center;
+    
+    
+}
+
+#left #people
+{
+    background-image:url("images/icon-person.svg");
+    background-repeat:no-repeat;
+    background-position:4% 50%;
+}
+
+#left #billPay
+{
+    background-image:url("images/icon-dollar.svg");
+    background-repeat:no-repeat;
+    background-position:4% 50%;
+}
+#left .lastCol
+{
+    margin-right:0px;
+}
+
+
+
+/*below is active page css for left*/
+#left input:hover, #left h3:hover
+{
+    cursor:pointer;  
+}
+
+#left h3:hover
+{
+    background-color:#30b3a5;
+    color:#10555A;
+}
+
+
+#left input:hover, #left #custom:hover
+{
+    border:2px solid #30b3a5;
+    color:#10555A;
+    outline:none;
+}
+
+/*
+#left h3
+{
+    background-color:#30b3a5;
+}
+*/
+#left input:focus
+{
+    text-align:right;
+    color:#10555A;
+    border:2px solid #30b3a5 !important;
+    outline-color:none;
+}
+
+
+
+/* for #left errors*/
+.error
+{
+    float:right;
+    color:red;
+    font-size:16px;
+    display:none;
+}
+
+#left #errorPerson
+{
+    margin-left:12px;
+    color:red;
+    font-size:16px;
+    display:none;
+}
+
+
+
+
+
+
+/*now for css for #right*/
+#right
+{
+
+    width:327px;
+    height:300px;
+    
+    box-sizing:border-box;
+    display:inline-block;
+    margin-top:50px;
+    margin-left:22px;
+    margin-right:24px;
+    box-sizing:border-box;
+    background-color:hsl(183, 100%, 15%);
+    border-radius:15px;
+}
+
+.super
+{
+    display:inline-block;
+    font-size:16px;
+    margin-left:24px;
+    margin-top:44px;
+    color:white;
+}
+
+.sub
+{
+    font-size:14px;
+    margin-left:44px;
+    color:hsl(186, 14%, 43%);
+}
+
+.amount
+{
+    font-size:26px;
+    float:right;
+    margin-right:24px;
+    margin-top:46px;
+    color:#30b3a5;
+
+}
+
+#right button
+{
+    margin-top:33px;
+    margin-left:23px;
+    width:284px;
+    font-size:20px;
+    font-weight:700;
+    padding-top:15px;
+    padding-bottom:15px;
+    background-color:#086d68;
+    color:#00484B;
+    border-radius:7px;
+    border:none;
+}
+
+
+/* for #right's active page */
+#right button:hover, #right button:hover
+{
+    cursor:pointer;
+    background-color:#9FE8DF;
+    color:#10555A;
+}
+
+
+}
