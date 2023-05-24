@@ -1,0 +1,74 @@
+.pageSlider {
+    -webkit-appearance: none;
+    width: 110%;
+    height: 5px;
+    background-color: #F1F5FE;
+    outline: none;
+   /* opacity: 0.7;*/
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+  /*  overflow: hidden;
+  height: 5px;  code2, problem arise as increase width slider area's with also increase and if we decrease then slider button also got smaller*/
+    
+  }
+  
+  
+  
+  .pageSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-image:url('images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius:20px;
+    border:1px solid none;
+    background-color: hsl(174, 86%, 45%);
+    cursor: pointer;
+  }
+
+  /* code:2
+  ::-webkit-slider-thumb {
+    width:100%;
+    box-shadow: -200px -100px 0 200px dodgerblue; 
+   
+}
+*/
+
+  
+  .pageSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background:hsl(174, 86%, 28%) ;
+    cursor: pointer;
+  }
+
+
+  .pageSlider::-webkit-slider-thumb:active
+  {
+    cursor:grabbing;
+    background-color:hsl(174, 86%, 28%);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
