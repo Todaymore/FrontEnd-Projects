@@ -90,8 +90,6 @@ function pageAndPrice()
 
 }
 
-if (screen.width < 600) {
-  alert("screen is working");
-}
+
 
 
