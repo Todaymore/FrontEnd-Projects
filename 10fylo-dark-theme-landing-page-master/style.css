@@ -1,0 +1,527 @@
+body
+{
+    /*font-family: 'Open Sans', sans-serif; for h1, and otherthings*/
+    font-family: 'Raleway', sans-serif;
+}
+
+#outerContainer
+{
+    width:1440px;
+    height:3619px;
+    border:4px solid none;
+    background-color: #1C2230;
+    background-image:url('images/bg-curvy-desktop.svg');
+   
+    background-repeat: no-repeat;
+    background-position: 0px 840px;;
+    color:white;
+}
+
+#middleInnerContainer
+{
+    background-color:hsl(218, 28%, 13%);
+}
+
+#topInnerContainer
+{
+    border:4px solid none;
+    width:100%;
+    height:1093px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+
+
+}
+
+#topInnerContainer #headSection
+{
+    border:2px solid none;
+    width:88.88%;
+    height:auto;
+    margin:0 auto;
+    margin-top:75px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+#headSection .headText
+{
+    border:1px solid none;
+    display:inline-block;
+    margin-left:50px;
+    margin-top:15px;
+}
+
+#headSection .headText:hover
+{
+    cursor:pointer;
+    font-weight:700;
+    text-decoration:underline;
+
+}
+
+#topInnerContainer #centerImg 
+{
+    border:1px solid none;
+    width:720px;
+    margin:0 auto;
+    margin-top:75px;
+}
+
+#topInnerContainer #centerImg h1
+{
+    text-align:center;
+    font-size:35px;
+    margin-top:45px;
+    font-weight:700;
+    line-height: 35px; 
+}
+
+#topInnerContainer #centerImg p
+{
+    text-align:center;
+    font-size:1.03em;
+    border:1px solid none;
+    width:75%;
+    margin:0 auto;
+    margin-top:45px;
+}
+
+#topInnerContainer #centerImg button
+{
+    width:280px;
+    height:55px;
+    display:block;
+    margin:0 auto;
+    margin-top:35px;
+    font-size:15px;
+    font-weight:700;
+    border-radius:30px;
+    background-color:hsl(198, 60%, 50%);
+    color:white;
+}
+
+#topInnerContainer #centerImg button:hover
+{
+
+    cursor:pointer;
+    background-color:#8BD9E3;
+}
+
+#middleInnerContainer
+{
+    height:1275px;
+    border:2px solid none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+#middleInnerContainer #upperContainer
+{
+    margin-top:170px;
+    width:880px;
+    height:500px;
+    border:2px solid none;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+#upperContainer .fourBenefits
+{
+    border:1px solid none;
+    width:403px;
+    text-align:center;
+    
+}
+
+#upperContainer .fourBenefits svg
+{
+    display:block;
+    margin:0 auto;
+    
+}
+
+#upperContainer .fourBenefits p
+{
+    font-size:20px;
+    font-weight:700;
+    margin-top:30px;
+    
+}
+
+#upperContainer .fourBenefits h4
+{
+    font-weight:normal;
+    font-size:15px;
+    margin-top:15px;
+    line-height:23px;
+}
+
+
+#middleInnerContainer #middleContainer
+{
+    height:600px;
+    width:88.88%;
+    border:4px solid none;
+    display:flex;
+    align-items:center;
+    
+    
+}
+
+#middleInnerContainer #middleContainer img
+{
+ 
+    width:627px;
+    height:467px;
+}
+
+#middleInnerContainer #middleContainer #textArea
+{
+    box-sizing:border-box;
+    border:2px solid none;
+    height:275px;  
+}
+
+
+#middleInnerContainer #middleContainer #textArea h1
+{
+
+    width:395px;
+    text-align:center;
+    font-size:35px;
+    font-weight:700;
+    line-height: 35px; 
+    border:1px solid none;
+}
+
+#middleInnerContainer #middleContainer #textArea h4
+{
+    width:80%;
+    margin:0 auto;
+    font-weight:normal;
+    font-size:15px;
+    margin-top:20px;
+    line-height:20px;
+}
+
+#middleInnerContainer #middleContainer #textArea h5
+{
+    font-size:15px;
+    width:80%;
+    margin:0 auto;
+    margin-top:33px;
+    text-decoration: underline;
+    text-decoration-color:hsl(176, 68%, 64%);
+    color:hsl(176, 68%, 64%);
+}
+
+#middleInnerContainer #middleContainer #textArea h5:hover
+{
+    cursor:pointer;
+    color:white;
+    text-decoration-color:white;
+}
+
+#middleInnerContainer #middleContainer #textArea svg
+{
+    vertical-align: bottom; 
+    border-bottom:1.5px solid hsl(176, 68%, 64%);
+}
+
+/* wherever you see hover effect it is for design page */
+#middleInnerContainer #middleContainer #textArea svg:hover
+{
+    cursor:pointer;
+    color:white;
+    text-decoration-color:white;
+    background-color:white;
+}
+
+#middleInnerContainer #firstLowerContainer
+{
+    width:80%;
+    height:243px;
+    
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    
+    background-image: url('images/bg-quotes.png');
+    background-color: #1C2230;
+    background-repeat:no-repeat;
+    margin-top:140px;
+    
+}
+
+
+
+#middleInnerContainer #firstLowerContainer .reviewBox
+{
+    display:flex;
+    flex-wrap:wrap;
+
+    background-color:#21293C;
+    width:360px;
+    height:200px;
+    border:1px solid none;
+    padding:45px 25px 25px;
+    margin-top:36px;
+    margin-left:10px;
+}   
+
+#middleInnerContainer #firstLowerContainer .reviewBox h4
+{
+    font-size:15px;
+}
+
+#middleInnerContainer #firstLowerContainer .reviewBox h6
+{
+    font-size:10px;
+    margin-left:7px;
+    line-height:14px;
+}
+
+#middleInnerContainer #firstLowerContainer .reviewBox img
+{
+    width:25px;
+    height:25px;
+    border-radius:25px;
+}
+
+
+#middleInnerContainer #secondLowerContainer
+{
+
+    width:866px;
+    height:275px;
+    border:2px solid none;
+    background-color:hsl(217, 27%, 13%);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding:55px 65px 40px;
+    border-radius:10px;
+    
+}
+#middleInnerContainer #secondOuterLowerContainer
+{
+    width:99.99%;
+    display:flex;
+    justify-content:center;
+    margin-top:200px;
+    background-image:linear-gradient(hsl(217, 28%, 15%) 0%, hsl(217, 28%, 15%) 50%, #0C1524 50%, #0C1524 100%);
+    border:2px solid none;
+    
+}
+
+#middleInnerContainer #secondLowerContainer h2
+{
+
+    font-size:25px;
+    font-weight:700;
+}
+
+#middleInnerContainer #secondLowerContainer h4
+{
+    font-size:15px;
+    text-align:center;
+    width:650px;
+    padding-top:30px;
+}
+
+#middleInnerContainer #secondLowerContainer button
+{
+
+    width:200px;
+    margin-top:35px;
+    margin-left:40px;
+    background-color:hsl(198, 60%, 50%);
+    color:white;
+    height:50px;
+    border-radius:50px;
+    box-sizing:border-box;
+    font-size:15px;
+    font-weight:700;
+}
+
+#middleInnerContainer #secondLowerContainer button:hover
+{
+    cursor:pointer;
+    background-color:#8BD9E3;
+}
+
+#middleInnerContainer #secondLowerContainer input
+{
+    width:480px;
+    height:50px;
+    box-sizing:border-box;
+    margin-top:35px;
+    vertical-align:super;
+    border-radius:50px;
+    text-indent: 40px;
+    font-size:15px;
+    
+    outline:none;
+}
+
+#middleInnerContainer #secondLowerContainer input::placeholder
+{
+    color:#e0dede;  
+}
+
+
+/*starting of lower container/ footer*/
+
+#middleInnerContainer #bottomOuterContainer
+{
+    width:99.99%;
+    display:flex;
+    justify-content:center;
+    background-color:hsl(216, 53%, 9%);
+}
+#middleInnerContainer #bottomInnerContainer
+{
+    height:230px; /*extra 10 height*/
+    width:88.88%;
+    border:2px solid none;
+    display:flex;
+    box-sizing:none;
+    flex-wrap:wrap;
+    background-color:hsl(216, 53%, 9%);
+    margin-top:85px;
+}
+
+#middleInnerContainer #bottomInnerContainer #firstRow 
+{
+   box-sizing:border-box;
+   display:flex;
+   justify-content: left;
+   border:5px solid none;
+   max-height:34%;
+}
+
+
+#middleInnerContainer #bottomInnerContainer #firstRow svg
+{
+   box-sizing:border-box;
+   text-align:left;
+   border:1px solid none;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow
+{
+    display:flex;
+    flex-wrap:wrap;
+    box-sizing:border-box;
+    justify-content: space-around;
+    width:100%;
+    height:135px;
+    border:1px solid none;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #firstColumn
+{
+    width:361px;
+    border:1px solid none;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #firstColumn h4
+{
+    margin-left:40px;
+    font-size:16px;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #firstColumn svg
+{
+    float:left;
+}
+
+
+
+#middleInnerContainer #bottomInnerContainer #secondRow #secondColumn
+{
+    width:155px;
+    border:1px solid none;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #secondColumn h4
+{
+    margin-left:45px;
+    font-size:12px;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #secondColumn svg
+{
+    float:left;
+}
+
+
+
+#middleInnerContainer #bottomInnerContainer #secondRow #thirdColumn
+{
+    width:75px;
+    border:1px solid none;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #thirdColumn h4
+{
+    font-size:16px;
+    
+}
+
+
+
+#middleInnerContainer #bottomInnerContainer #secondRow #fourthColumn
+{
+    width:83px;
+    border:1px solid none;
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #fourthColumn h4
+{
+    font-size:16px;
+    
+}
+
+#middleInnerContainer #bottomInnerContainer #secondRow #fifthColumn img
+{
+    background-color:black;
+    border:2px solid none;
+}
+
+#bottomInnerContainer #secondRow #fourthColumn h4:hover, #thirdColumn h4:hover
+{
+    cursor:pointer;
+    font-weight:700;
+}
+
+#bottomInnerContainer #secondRow #fifthColumn
+{
+    cursor:pointer;
+}
+
+/*for error Message*/
+#errorMsg
+{
+   width:100%;
+   border:1px solid none;
+   color:red;
+   font-size:10px;
+   text-indent:48px;
+   margin-top:10px;
+   display:none;
+   
+}
+
+button
+{
+    outline:none;
+}
