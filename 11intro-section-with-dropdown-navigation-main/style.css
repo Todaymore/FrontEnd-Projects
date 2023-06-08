@@ -1,0 +1,265 @@
+#outerContainer
+{
+  width:1440px;
+  height:900px;
+  background-color:hsl(0, 0%, 98%);
+  /*display:flex;*/
+  flex-wrap:wrap;
+  font-size:18px;
+  
+
+}
+
+#upperContainer
+{
+    display:flex;
+    flex-wrap:wrap;
+    border:2px solid none;
+    width:100%;
+    height:64px;
+    padding:0 40px;
+    padding-top:30px;
+    box-sizing:border-box;
+    color:hsl(0, 0%, 41%);
+    font-weight:500;
+}
+
+#upperContainer h2
+{
+  display:inline-block;
+}
+
+#upperContainer h2:hover
+{
+    cursor:pointer;
+    color:hsl(0, 0%, 8%);
+
+}
+
+#upperContainer svg[id="logo"]
+{
+    padding-right:60px;
+}
+
+#upperContainer svg[class="dropArrow"]
+{
+    
+    border:1px solid none;
+    margin-top:6px;
+    margin-left:5px;
+    margin-right:35px;
+}
+
+#upperContainer svg[class="upArrow"]
+{
+    display:none;
+    border:1px solid none;
+    margin-top:6px;
+    margin-left:5px;
+    margin-right:35px;
+}
+#upperContainer #justForSpace
+{
+    margin-right:35px;
+}
+
+#upperContainer #leftSide
+{
+    text-align:right;
+    border:2px solid none;
+    width:59%;
+    box-sizing:border-box;
+}
+
+#upperContainer #leftSide #forRegister
+{
+    border:2px solid hsl(0, 0%, 41%);
+    padding:10px 20px;
+    border-radius:10px;
+    margin-left:40px;
+}
+
+#upperContainer #leftSide #forRegister:hover
+{
+   border:2px solid hsl(0, 0%, 8%);
+}
+
+#dropDownLists
+{
+    
+    width:315px;
+    height:160px;
+    background-color:transparent;
+    color:hsl(0, 0%, 41%);
+    font-size:15px;
+    display:flex;
+   
+    margin-left:111px;
+    border-radius:10px;
+    position:absolute;
+}
+
+#dropDownLists #featuresDropDown
+{
+    width:50%;
+    background-color:white;
+    display:flex;
+    flex-wrap:wrap; 
+    line-height:30px;
+    text-align:center;
+    padding-top:10px;
+    justify-content:center;
+    border-radius:10px;
+    visibility: hidden;
+    
+    
+   
+}
+
+#dropDownLists #featuresDropDown h4
+{
+    margin:0px;
+    padding:0px;
+    display:inline-block;
+    
+}
+
+#dropDownLists #featuresDropDown svg
+{
+    vertical-align:sub;
+}
+
+#dropDownLists #companyDropDown 
+{
+ 
+    
+    width:39%;
+    margin-left:40px;
+    background-color:white;
+    display:flex;
+    flex-wrap:wrap; 
+    line-height:30px;
+    text-align:left;
+    padding-top:10px;
+    justify-content:center;
+    border-radius:10px;
+    visibility: hidden;
+}
+
+#middleContain
+{
+    width:100%;
+    
+    height:660px; /* assume for now*/
+    
+    display:flex;
+}
+
+#middleContain #leftContainer
+{
+    width:680px;
+  
+    height:100%;
+    padding-left:170px;
+    margin-top:170px;
+
+
+}
+
+#middleContain #leftContainer h1
+{
+    font-size:85px;
+    font-weight:700;
+    width:510px;
+}
+
+#middleContain #leftContainer p
+{
+    margin-top:60px;
+    font-size:20px;
+    width:425px;
+    color:hsl(0, 0%, 41%);
+    font-size:500;
+
+
+}
+
+#middleContain #leftContainer button
+{
+    
+    margin-top:50px;
+    font-size:20px;
+    font-weight:700;
+    width:160px;
+    height:50px;
+    box-sizing:border-box;
+    border:1px solid black;
+    padding:15px auto 15px;
+    border-radius:10px;
+    background-color:hsl(0, 0%, 8%);
+    color:hsl(0, 0%, 98%);
+}
+
+#middleContain #leftContainer button:hover
+{
+    cursor:pointer;
+}
+
+#middleContain #leftContainer #imageSection
+{
+
+    width:485px;
+    border:2px solid none;
+    
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top:105px;
+}
+
+
+#middleContain #rightContainer
+{
+    border:2px solid none;
+    width:52%;
+    display:flex;
+    justify-content: center;
+    margin-top:60px;
+}
+#middleContain #rightContainer img
+{
+
+    height:645px;
+    width:485px;
+}
+
+
+
+
+
+
+
+
+
+
+/* do it later
+@media only screen and ( max-width:376px)
+{
+
+    
+
+
+
+
+
+
+
+
+
+}
+*/
+
+
+
+
+
