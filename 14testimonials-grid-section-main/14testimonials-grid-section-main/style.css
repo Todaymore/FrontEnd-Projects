@@ -1,0 +1,380 @@
+
+  
+#outerContainer
+{
+   font-family: 'Barlow Semi Condensed', sans-serif;
+   font-size:13px;
+   width:1440px;
+   height:900px;
+   border:2px solid none;
+   display:flex;
+   justify-content: center;
+   align-content: center;
+   background-color: #EDF2F8;
+}
+ 
+
+  .gridItem1
+  {
+    grid-area:daniel;
+    background-color:hsl(263, 55%, 52%);
+    color:white;
+    box-sizing: border-box;
+  }
+
+  .gridItem2
+  {
+    grid-area:jonathan;
+    background-color:#49556B;
+    color:white;
+    box-sizing: border-box;
+  }
+
+  .gridItem3
+  {
+    grid-area:kira;
+    background-color:white;
+    color:black;
+    box-sizing: border-box;
+  }
+
+  .gridItem4
+  {
+    grid-area:jeanette;
+    background-color:white;
+    color:black;
+    box-sizing: border-box;
+
+  }
+
+  .gridItem5
+  {
+    grid-area: patrick;
+    background-color:#18202D;
+    color:white;
+    box-sizing: border-box;
+
+  }
+  
+
+  #gridContainer
+  {
+     display:grid;
+    
+     grid-template-areas: 'daniel daniel jonathan kira' 
+                            'jeanette patrick patrick kira';
+    grid-auto-columns: 265px;
+    grid-auto-columns: 280px;
+     column-gap:30px;
+     gap: 10px;
+     background-color: #EDF2F8; 
+     border:2px solid none;
+     width:1220px;
+    height:570px;
+     margin:auto auto;
+     column-gap: 30px;
+     row-gap:25px;
+  }
+  
+  #gridContainer > div
+  {
+    text-align: center;
+    padding: 25px 30px;
+    font-size: 30px;
+    border-radius:10px;
+    box-sizing:none;
+     
+  }
+
+   
+   .firstRow
+  {
+    display:flex;
+    flex-direction:row;
+    border:1px solid none;
+    height:35px;
+  }
+
+   .firstRow #img1
+  {
+    height:30px;
+    width:30px;
+    
+    border-radius:15px;
+  }
+
+   .firstRow .name
+  {
+     font-size:15px;
+     font-weight:500;
+     display:inline-block;
+     border:1px solid none;
+     margin-left:15px;
+     text-align:left;
+     line-height:16px;
+  }
+
+
+  .firstRow .status
+  {
+    display:inline-block;
+    font-size:13px;
+    border:1px solid none;
+    color:#BABEC1;
+    
+  }
+
+  .secondRow
+  {
+     font-size:20px;
+     font-weight:600;
+     border:1px solid none;
+     text-align:left;
+     width:100%;
+     margin-top:10px;
+     line-height:25px;
+  }
+
+ .thirdRow
+  {
+    font-size:13px;
+    text-align:left;
+    margin-top:10px;
+    color:#AF8BE5;
+    line-height:18px;
+  }
+
+
+  .gridItem2
+  {
+    display:flex;
+    flex-direction:column;
+    box-sizing:border-box;
+
+  }
+
+  .gridItem2 .status, .thirdRow
+  {
+
+    color:#96A1B5;
+  }
+
+
+  .gridItem1
+  {
+    display:flex;
+    flex-direction:column;
+    box-sizing:border-box;
+    background-image:url('images/bg-pattern-quotation.svg');
+    background-repeat:no-repeat;
+    background-position: 83% 0%;
+  }
+
+  .gridItem1 .firstRow #img1 , .gridItem5 .firstRow #img1
+  {
+
+    border:2px solid #9F6EE1;
+   
+  }
+
+  .gridItem1 .firstRow .status
+  {
+
+    color:#AF8BE5;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 376px)
+  {
+
+    #outerContainer
+ {
+   font-family: 'Barlow Semi Condensed', sans-serif;
+   font-size:13px;
+   width:375px;
+   height:2100px;
+   border:2px solid none;
+   display:flex;
+   justify-content: center;
+   align-content: center;
+   background-color: #EDF2F8;
+   box-sizing:border-box;
+  }
+ 
+
+  .gridItem1
+  {
+    grid-area:daniel;
+    background-color:hsl(263, 55%, 52%);
+    color:white;
+    box-sizing: border-box;
+  }
+
+  .gridItem2
+  {
+    grid-area:jonathan;
+    background-color:#49556B;
+    color:white;
+    box-sizing: border-box;
+  }
+
+  .gridItem3
+  {
+    grid-area:kira;
+    background-color:white;
+    color:black;
+    box-sizing: border-box;
+  }
+
+  .gridItem4
+  {
+    grid-area:jeanette;
+    background-color:white;
+    color:black;
+    box-sizing: border-box;
+
+  }
+
+  .gridItem5
+  {
+    grid-area: patrick;
+    background-color:#18202D;
+    color:white;
+    box-sizing: border-box;
+
+  }
+  
+
+  #gridContainer
+  {
+    width:330px;
+    height:1966px;
+     display:grid;
+    
+     grid-template-areas: 'daniel' 'daniel' 'jonathan' 
+                            'jeanette' 'patrick' 'patrick' 'kira' 'kira' ;
+     grid-auto-columns: 325px;
+     grid-auto-rows: 240px;
+     background-color: #EDF2F8; 
+     border:2px solid none;
+     margin:auto auto;
+     column-gap: 0px;
+     row-gap:25px;
+     
+  }
+  
+  #gridContainer > div
+  {
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 30px;
+    border-radius:10px;
+     
+  }
+
+   .firstRow
+  {
+    display:flex;
+    flex-direction:row;
+    border:1px solid none;
+    height:35px;
+  }
+
+   .firstRow #img1
+  {
+    height:30px;
+    width:30px;
+    border-radius:15px;
+  }
+
+   .firstRow .name
+  {
+     font-size:15px;
+     font-weight:500;
+     display:inline-block;
+     border:1px solid none;
+     margin-left:15px;
+     text-align:left;
+     line-height:16px;
+  }
+
+
+  .firstRow .status
+  {
+    display:inline-block;
+    font-size:13px;
+    border:1px solid none;
+    color:#BABEC1;
+    
+  }
+
+  .secondRow
+  {
+     font-size:20px;
+     font-weight:600;
+     border:1px solid none;
+     text-align:left;
+     width:100%;
+     margin-top:10px;
+     line-height:25px;
+  }
+
+ .thirdRow
+  {
+    font-size:13px;
+    text-align:left;
+    margin-top:10px;
+    color:#AF8BE5;
+    line-height:18px;
+  }
+
+
+  .gridItem2
+  {
+    display:flex;
+    flex-direction:column;
+    box-sizing:border-box;
+
+  }
+
+  .gridItem2 .status, .thirdRow
+  {
+
+    color:#96A1B5;
+  }
+
+
+  .gridItem1
+  {
+    display:flex;
+    flex-direction:column;
+    box-sizing:border-box;
+    background-image:url('images/bg-pattern-quotation.svg');
+    background-repeat:no-repeat;
+    background-position: 90% 0%;
+    margin-top:70px;
+  }
+
+  .gridItem1 .firstRow #img1 , .gridItem5 .firstRow #img1
+  {
+
+    border:2px solid #9F6EE1;
+   
+  }
+
+  .gridItem1 .firstRow .status
+  {
+
+    color:#AF8BE5;
+  }
+
+  }
