@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+main
+{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size:18px;
+    width:1450px; /*width 10 more and height 22 more*/
+    height:3830px;
+    background-image:url('images/bg-header-desktop.png');
+    background-repeat:no-repeat;
+}
+
+#innerMain
+{
+    width:1440px;
+    height:3808px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    
+}
+
+#innerMain p
+{
+    color:hsl(201, 11%, 66%);
+}
+
+#innerMain h1,h2,h3
+{
+    color:hsl(210, 10%, 33%);
+}
+/*starting of header tag*/
+header
+{
+    
+    width:705px;
+    height:885px; /*30px more than actual height*/
+    margin: 0 auto;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-content:center;
+    box-sizing:border-box;
+   
+}
+
+header svg
+{
+    
+    margin:0 auto;
+    margin-top:130px;
+}
+
+header h1
+{
+
+    text-align:center;
+    font-size:45px;
+    font-weight:600;
+    margin-top:70px;
+}
+
+header p
+{
+
+    text-align:center;
+    font-size:20px;
+    line-height:30px;
+    margin-top:25px;
+    
+}
+
+/* for header buttons */
+#headerButtons
+{
+    display:flex;
+    justify-content:center;
+    margin-top:60px;
+
+}
+
+.headerButton
+{
+    box-sizing:border-box;
+    width:228px;
+    height:55px;
+    border-radius:25px;
+    font-size:18px;
+    font-weight:600;
+    color:white;
+    border:none;
+    outline:none;
+}
+
+#b1
+{
+    margin-right:15px;
+    background-color:#26BBA5;
+}
+
+#b1:hover
+{
+    cursor:pointer;
+    background-color:#5DCCBB;
+}
+
+#b2
+{
+
+    background-color:#6174FF;
+}
+
+#b2:hover
+{
+    cursor:pointer;
+    background-color:#8896FF;
+}
+header h2
+{
+
+    font-size:35px;
+    text-align:center;
+    margin-top:160px;
+    font-weight:600;
+}
+
+header .pSmaller
+{
+
+    font-size:18px;
+    margin-top:25px;
+}
+
+
+
+                       /*starting of middle*/
+#middle
+{
+    width:99.99%;
+   display:flex;
+   flex-direction:column;
+   
+   align-items:center;
+}
+                       
+#middle #firstSection
+{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width:99.99%;
+    
+    margin-top:85px;
+}
+
+#middle #firstSection #textSection
+{
+    display:flex;
+    flex-direction:column;
+    
+    
+    
+    width:40%;
+}
+
+#firstSection #textSection h3
+{
+      font-size:25px;
+      font-weight:600;
+      margin-top:20px;
+      
+}
+
+#firstSection #textSection p
+{
+     font-size:18px;
+     width:70%;
+     margin-top:15px;
+     line-height:25px;
+}
+
+                     /*starting of #secondSection*/
+
+#middle #secondSection
+{
+    
+    height:965px; /*10px more than actual*/
+    width:57%;
+    display:flex;
+    flex-direction:column;
+    margin-top:85px; /*75px less as I mention below in H2 tag*/
+}
+
+#middle #secondSection img
+{
+    margin-top:115px;
+    
+}
+#middle #secondSection h2
+{
+    font-size:35px;
+    text-align:center;
+    font-weight:600;
+    margin-top:75px;
+}
+
+#secondSection p
+{
+    font-size:18px;
+    
+    margin:0 auto;
+    margin-top:25px;
+    width:680px;
+    text-align:center;
+}
+
+                    /*#thirdSection starts*/
+                    
+
+#middle #thirdSection
+{
+   height:440px;
+   width:1230px; /*10px more than actual*/
+ 
+   margin-top:80px;
+}
+                   /*#writingArea of #thirdSection starts*/
+#thirdSection #writingArea
+{
+    display:flex;
+    justify-content: space-between;
+   
+
+}
+
+#thirdSection #writingArea .article
+{
+    
+    width:390px;
+    text-align:center;
+}
+
+#thirdSection #writingArea .article h3
+{
+      font-size:25px;
+      font-weight:600;
+      margin-top:45px;
+      
+}
+
+#thirdSection #writingArea .article h3[id="lessTopMargin"]
+{
+    margin-top:37px;
+}
+
+#thirdSection #writingArea .article p
+{
+     font-size:18px;
+     margin-top:15px;
+     line-height:25px;
+}
+
+                        /*#picsArea of #thirdSection starts*/
+#middle #thirdSection #picsArea
+{
+    
+    width:99.99%;
+    
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top:170px;
+}
+
+
+
+                        /*#fourth starts*/
+#middle #forthSection
+{
+    height:230px;
+   
+
+    margin-top:170px;
+}
+
+#middle #forthSection h2
+{
+
+    font-size:35px;
+    text-align:center;
+    font-weight:600;
+    
+}
+
+#middle #forthSection p
+{
+
+    font-size:18px;
+    line-height:26px;
+    margin:0 auto;
+    margin-top:25px;
+    width:680px;
+    text-align:center;
+}
+
+/* no need as i copy  header tag buttons 
+because they are identical to this section buttons
+#middle #forthSection button
+{
+
+}
+*/
+
+                     /*end of main*/
+
+                     /*footer starts*/
+footer
+{
+    width:100%;
+    padding-left:165px;
+    padding-right:165px;
+    height:165px;
+    
+    margin:0 auto;
+    margin-top:155px;
+    display:flex;
+    background-color:#F5F6F8;
+   
+    
+}
+
+     
+ #logo img
+{
+    width:55px;
+    height:55px;
+    
+    
+}
+
+footer #logo
+{
+   display:flex;
+   align-items:center;
+   width:58px;
+   margin-right:150px;
+   
+
+}
+
+footer #write
+{
+  width:580px;
+  
+  margin-right:205px;
+  display:flex;
+  align-items:center;
+  justify-content:left;
+}
+
+#write table
+{
+    border-collapse:separate;
+    border-spacing:0 25px;
+}
+
+#write table td
+{
+    color:hsl(210, 10%, 33%);
+    width:190px;
+
+}
+
+#write table td:hover
+{
+    cursor:pointer;
+    color:#5DCCBB;
+}
+
+
+footer #pics
+{
+
+    width:32%;
+
+    display:flex;
+    justify-content: right;
+    align-items:center;
+
+}
+
+footer #pics svg
+{
+    margin-right:25px;
+}
+
+/*
+footer #pics svg:hover
+{
+    cursor:pointer;
+    color:#5DCCBB;
+}
+*/
+#twitter,#facebook,#instagram
+{
+    fill:#4C545C;
+}
+
+#twitter:hover, #facebook:hover, #instagram:hover
+{
+    
+    cursor:pointer;
+    fill:#5DCCBB;
+   
+}
