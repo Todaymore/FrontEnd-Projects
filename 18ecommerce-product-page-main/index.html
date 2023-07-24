@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet">
+ 
+  <!--Linking font family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    /*body
+    { no need as I learned how to use google fonts within tailwindcss ,
+      tailwind.config.js->extend
+      font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+    }*/
+  </style>
+</head>
+<body class="text-base font-Kumbh h-full">
+
+<!--if click on menu bar-->
+<div id="menu" class="hidden w-9/12 h-screen absolute z-20 bg-white  min-h-full  pl-8 pt-4 leading-loose font-bold">
+  <img src="images/icon-close.svg" alt=" icon-close" class="hover:cursor-pointer" onclick="closeMenu()"/>
+  <a href="#" class="inline-block mt-7">Collections</a><Br/>
+  <a href="#">Men</a><Br/>
+  <a href="#">Women</a><Br/>
+  <a href="#">About</a><Br/>
+  <a href="#">Contact</a>
+</div>
+<!--menu bar code completed-->
+
+<div id="whole" class="flex flex-col items-center ">
+  <header class="bg-neutral-100 w-full flex justify-evenly align-bottom">
+    <div class= "w-full h-16 align-center  flex justify-between items-center flex-wrap">
+      <div class="pl-6 flex w-2/4  justify-start items-center ">
+      <img class="h-4 hover:cursor-pointer" src="images/icon-menu.svg" alt="menu icon" onclick="openMenu()"/>
+      <h1 class="text-3xl font-Kumbh ml-6 font-bold ">sneakers</h1>
+      </div>
+
+      <div class="pr-6 flex  relative">
+      <img onclick="cartPage()" class="h-6 mr-4 hover:cursor-pointer"  src="images/icon-cart.svg" alt="icon of cart"/>
+      <h6 id="addedItems" class="hidden text-xxs my-0 absolute left-2 -top-1   bg-orange-600 px-1.5 py-0.5 rounded-md text-white">0</h6>
+      <img class="w-7 h-7" src="images/image-avatar.png" alt="image of a login person" />
+      </div>
+    </div>  
+  </header>
+  <main>
+    <div class="relative">
+   
+      <!--start section for cart-->
+      <div class="relative">
+         <div id="fullCart" class="hidden bg-slate-50 absolute left-12 top-12 flex flex-col  w-10/12 max-h-80 text-base mx-auto font-semibold rounded-xl">
+          <p class="px-5 mt-6 max-w-sm">Cart</p>
+          <hr class="h-0.5 bg-gray-400 mt-4 px-0">
+          <div class="flex justify-around items-center flex-wrap mt-12">
+          <img class="h-12 rounded-md" src="images/image-product-1-thumbnail.jpg" alt="one of the image of the product"/>
+          <p class="w-5/12 text-left font-normal">Fall Limited Edition Sneakers $125.00 x <span id="noOfProd">1</span> <span id="totalPrice" class="font-bold">$125.00</span></p>
+          <img onclick="deleteItems()" class="h-6 rounded-md hover:cursor-pointer" src="images/icon-delete.svg" alt="delete selected products"/>
+          <br/>
+          <button class="w-9/12 my-6 py-3 rounded-xl bg-orange-600 text-white text-2xl font-bold ">Checkout</button>
+          </div>
+        </div> 
+
+        
+        <div id="emptyCart" class=" bg-slate-50 hidden absolute left-12 top-12 w-10/12  flex flex-col h-64 text-lg mx-auto font-semibold rounded-xl">
+          <p class="px-5 mt-6">Cart</p>
+          <hr class="h-0.5 bg-gray-400 mt-4 px-0">
+          <p class="self-center mt-16 text-center">Your Cart is Empty</p>
+        </div>
+      <!--end section of cart-->
+
+        <img id="zeroImage" class="max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12"  src="images/image-product-1.jpg" alt="product image"/> 
+        <img id="firstImage" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12" src="images/image-product-2.jpg" alt="product image"/> 
+        <img id="secondImage" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12" src="images/image-product-3.jpg" alt="product image"/> 
+        <img id="thirdImage" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12" src="images/image-product-4.jpg" alt="product image"/> 
+      </div>
+
+      <img onclick="imageRotator(-1)" class="absolute bottom-44 hover:cursor-pointer md:left-20 lg:left-32" src="images/icon-previous.svg" alt="icon of previous"/>   
+      <img onclick="imageRotator(1)" class="absolute bottom-44 right-0 hover:cursor-pointer md:right-20 lg:right-32" src="images/icon-next.svg" alt="icon of previous"/> 
+    </div>
+
+    <div class="px-8">
+      <p class="text-orange-600 uppercase text-sm font-bold mt-8">Sneaker Company</p>
+      <h1 class="text-3xl font-bold mt-8">Fall Limited Edition Sneakers</h1>
+      <p class="mt-8 text-grayish-blue ">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      
+      <div class="flex mt-8  max-w-sm mx-auto">
+        <div class=" w-10/12">
+          <span class=" text-3xl font-bold">$125.00</span>
+          <span class="text-orange-600 bg-orange-200  ml-6 px-1.5 align-super rounded-md font-bold">50%</span>
+        </div>
+        <div class="self-end">
+          <span class="p-4 text-right line-through"> $250.00</span>
+        </div>
+      </div>
+    
+      <div class="bg-gray-100 max-w-sm mx-auto py-2 px-4 rounded-xl flex justify-between items-center mt-8">
+        <img class="hover:cursor-pointer" src="images/icon-minus.svg" alt="icon of minus" onclick="countItems(-1)"/>
+        <p class="font-semibold text-lg" id="totalSneakers">0</p>
+        <img class="hover:cursor-pointer" src="images/icon-plus.svg" alt="icon of plus"  onclick="countItems(1)"/>
+      </div>
+
+      <div onclick="addToCart()"  class="bg-orange-600 max-w-sm mx-auto py-2 px-4 rounded-xl flex justify-center items-center mt-4 text-white hover:cursor-pointer">
+        <img src="images/icon-cartWhite.svg" alt="icon of cartWhite"/>
+        <p  class="font-semibold text-lg pl-8 hover:cursor-pointer">Add to cart</p>
+      </div>
+    </div>
+  </main>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Today more</a>.
+  </div>
+</div>
+<script src="code.js"></script>
+</body>
+</html>
