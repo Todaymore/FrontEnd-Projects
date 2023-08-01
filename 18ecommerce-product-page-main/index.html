@@ -18,12 +18,14 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    
     /*body
     { no need as I learned how to use google fonts within tailwindcss ,
       tailwind.config.js->extend
       font-family: 'Kumbh Sans', sans-serif;
-font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans', sans-serif;
     }*/
+
   </style>
 </head>
 <body class="text-base font-Kumbh h-full">
@@ -39,27 +41,74 @@ font-family: 'Open Sans', sans-serif;
 </div>
 <!--menu bar code completed-->
 
-<div id="whole" class="flex flex-col items-center ">
-  <header class="bg-neutral-100 w-full flex justify-evenly align-bottom">
-    <div class= "w-full h-16 align-center  flex justify-between items-center flex-wrap">
-      <div class="pl-6 flex w-2/4  justify-start items-center ">
-      <img class="h-4 hover:cursor-pointer" src="images/icon-menu.svg" alt="menu icon" onclick="openMenu()"/>
-      <h1 class="text-3xl font-Kumbh ml-6 font-bold ">sneakers</h1>
-      </div>
 
-      <div class="pr-6 flex  relative">
-      <img onclick="cartPage()" class="h-6 mr-4 hover:cursor-pointer"  src="images/icon-cart.svg" alt="icon of cart"/>
-      <h6 id="addedItems" class="hidden text-xxs my-0 absolute left-2 -top-1   bg-orange-600 px-1.5 py-0.5 rounded-md text-white">0</h6>
-      <img class="w-7 h-7" src="images/image-avatar.png" alt="image of a login person" />
+
+<!--the only efficient solution i can see now is to use if(widht>=this )in 
+and then may be i can combine above 16 statement in 8
+also try "window.innerwidth" properties-->
+
+
+
+<!--problem solved of lightbox and normal box now work in details of hover and normal page
+-->
+<!--lightbox starts here-->
+<div id="lightboxAppear"  class="hidden w-5/12 absolute z-40  left-1/4 bg-transparent">
+  <div class="flex justify-end">
+  <img  onclick="closeLightBox()" id="closeLBox" class="hover:cursor-pointer" src="images/icon-close.svg" alt=" icon-delete"/>
+  </div>
+  <div class="relative top-6">                                 <!--hover:text-white does not working-->
+    <img onclick="imageRotato(-1)" id="previousLightBox" class="absolute top-2/4 py-3 px-4 rounded-3xl bg-white  hover:cursor-pointer hover:text-blue-50" src="images/icon-previous.svg" alt="icon of previous button"/>
+    <img onclick="imageRotato(1)" id="nextLightBox" class="absolute top-2/4 right-0 py-3 px-4 rounded-3xl bg-white hover:text-white hover:cursor-pointer" src="images/icon-next.svg" alt="icon of next button"/>
+    <img id="zeroImag"   class=" max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl"  src="images/image-product-1.jpg" alt="product image"/> 
+    <img id="firstImag"  class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl" src="images/image-product-2.jpg" alt="product image"/> 
+    <img id="secondImag"  class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl" src="images/image-product-3.jpg" alt="product image"/> 
+    <img id="thirdImag"   class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl" src="images/image-product-4.jpg" alt="product image"/> 
+  </div>
+  <div class=" lg:flex lg:justify-evenly mt-12">
+    <img id="zerothumbnai" onclick="thumbnailEffec(0)" class="w-2/12 rounded-lg opacity-30 border-2 border-orange-600 hover:opacity-60 hover:cursor-pointer" src="images/image-product-1-thumbnail.jpg"  alt="first thumbnail image"/> 
+    <img id="firstthumbnai" onclick="thumbnailEffec(1)" class="w-2/12 rounded-lg hover:opacity-60 hover:cursor-pointer" src="images/image-product-2-thumbnail.jpg" alt="second thumbnail image"/>
+    <img id="secondthumbnai" onclick="thumbnailEffec(2)" class="w-2/12 rounded-lg hover:opacity-60 hover:cursor-pointer" src="images/image-product-3-thumbnail.jpg" alt="third thumbnail image"/>
+    <img id="thirdthumbnai"  onclick="thumbnailEffec(3)" class="w-2/12 rounded-lg hover:opacity-60 hover:cursor-pointer" src="images/image-product-4-thumbnail.jpg" alt="fourth thumbnail image"/>
+  </div><!--if i click on one picture then hover effect vanishes means hover does not work-->
+                                          <!--actually hover effect not vanishes
+                                              just opactity does not work because
+                                              hover:cursor-pointer working even after click-->
+  </div>
+<!--lightbox closed-->
+
+<div id="whole" class=" flex flex-col items-center ">
+  <header class="bg-neutral-100 lg:bg-white w-full flex justify-evenly align-bottom">
+    <div class= "lg:w-10/12 w-full mx-auto h-20  align-center flex justify-between items-center flex-wrap">
+     <div class= "flex justify-start w-2/3 ">
+      <div class="pl-6 flex w-2/4 lg:w-3/12 justify-start items-center">
+      <img class="h-4 hover:cursor-pointer lg:hidden" src="images/icon-menu.svg" alt="menu icon" onclick="openMenu()"/>
+      <h1 class="text-3xl font-Kumbh ml-6 lg:ml-0  lg:text-4xl font-bold ">sneakers</h1>
       </div>
+      <div class="hidden lg:flex pt-2.5 lg:text-lg space-x-4 ml-10 text-gray-300">
+          <a href="#" class="hover:border-b-2 hover:pb-2 border-orange-400">Collections</a>
+          <a href="#" class="hover:border-b-2 hover:pb-2 border-orange-400">Men</a>
+          <a href="#" class="hover:border-b-2 hover:pb-2 border-orange-400">Women</a>
+          <a href="#" class="hover:border-b-2 hover:pb-2 border-orange-400">About</a>
+          <a href="#" class="hover:border-b-2 hover:pb-2 border-orange-400">Contact</a>
+      </div>
+    </div>
+      <div class="pr-6 flex  items-center relative">
+      <img onclick="cartPage()" class="h-6 mr-4 lg:mr-8 hover:cursor-pointer"  src="images/icon-cart.svg" alt="icon of cart"/>
+      <h6 id="addedItems" class="hidden text-xxs my-0 absolute left-2 top-1 lg:top-3  bg-orange-600 px-1.5 py-0.5 rounded-md text-white">0</h6>
+      <img class="w-10 lg:w-14 lg:h-14 hover:border-2 hover:cursor-pointer border-orange-400 rounded-3xl" src="images/image-avatar.png" alt="image of a login person" />
+      </div>
+      <hr class="w-full h-[1px] bg-gray-300 mt-2 px-0">
     </div>  
   </header>
+
+
+
   <main>
-    <div class="relative">
+    <div class="lg:flex lg:w-10/12 lg:mx-auto lg:mt-20">
+    <div class="lg:w-1/2">
    
       <!--start section for cart-->
-      <div class="relative">
-         <div id="fullCart" class="hidden bg-slate-50 absolute left-12 top-12 flex flex-col  w-10/12 max-h-80 text-base mx-auto font-semibold rounded-xl">
+         <div id="fullCart" class="hidden bg-slate-50 absolute z-20 left-12 top-12 flex flex-col  w-10/12 lg:w-4/12 lg:right-0 max-h-80 text-base mx-auto font-semibold rounded-xl">
           <p class="px-5 mt-6 max-w-sm">Cart</p>
           <hr class="h-0.5 bg-gray-400 mt-4 px-0">
           <div class="flex justify-around items-center flex-wrap mt-12">
@@ -71,53 +120,70 @@ font-family: 'Open Sans', sans-serif;
           </div>
         </div> 
 
-        
-        <div id="emptyCart" class=" bg-slate-50 hidden absolute left-12 top-12 w-10/12  flex flex-col h-64 text-lg mx-auto font-semibold rounded-xl">
+        <div id="emptyCart" class="hidden bg-slate-50  absolute z-20 left-12 top-12 w-10/12 lg:w-4/12 lg:right-0   flex-col h-64 text-lg mx-auto font-semibold rounded-xl">
           <p class="px-5 mt-6">Cart</p>
           <hr class="h-0.5 bg-gray-400 mt-4 px-0">
           <p class="self-center mt-16 text-center">Your Cart is Empty</p>
         </div>
       <!--end section of cart-->
 
-        <img id="zeroImage" class="max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12"  src="images/image-product-1.jpg" alt="product image"/> 
-        <img id="firstImage" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12" src="images/image-product-2.jpg" alt="product image"/> 
-        <img id="secondImage" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12" src="images/image-product-3.jpg" alt="product image"/> 
-        <img id="thirdImage" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-7/12" src="images/image-product-4.jpg" alt="product image"/> 
+      <div class="relative" >
+        <img id="zeroImage" onclick="lightBox()"  class=" max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl"  src="images/image-product-1.jpg" alt="product image"/> 
+        <img id="firstImage" onclick="lightBox()" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl" src="images/image-product-2.jpg" alt="product image"/> 
+        <img id="secondImage" onclick="lightBox()" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl" src="images/image-product-3.jpg" alt="product image"/> 
+        <img id="thirdImage"  onclick="lightBox()" class="hidden max-h-96 mx-auto md:w-8/12 md:h-auto lg:w-11/12 lg:rounded-xl" src="images/image-product-4.jpg" alt="product image"/> 
       </div>
 
-      <img onclick="imageRotator(-1)" class="absolute bottom-44 hover:cursor-pointer md:left-20 lg:left-32" src="images/icon-previous.svg" alt="icon of previous"/>   
-      <img onclick="imageRotator(1)" class="absolute bottom-44 right-0 hover:cursor-pointer md:right-20 lg:right-32" src="images/icon-next.svg" alt="icon of previous"/> 
+
+
+      <!-- begin:-> thumbnail images for large and larger screens only-->
+      <div class="hidden lg:flex  lg:justify-evenly mt-6">
+      <img id="zerothumbnail" onclick="thumbnailEffect(0)" class="w-1/5 rounded-lg opacity-30 border-2 border-orange-600 hover:cursor-pointer" src="images/image-product-1-thumbnail.jpg" alt="first thumbnail image"/> 
+      <img id="firstthumbnail" onclick="thumbnailEffect(1)" class="w-1/5 rounded-lg hover:cursor-pointer hover:opacity-50" src="images/image-product-2-thumbnail.jpg" alt="second thumbnail image"/>
+      <img id="secondthumbnail" onclick="thumbnailEffect(2)" class="w-1/5 rounded-lg hover:cursor-pointer hover:opacity-50" src="images/image-product-3-thumbnail.jpg" alt="third thumbnail image"/>
+      <img id="thirdthumbnail" onclick="thumbnailEffect(3)" class="w-1/5 rounded-lg hover:cursor-pointer hover:opacity-50" src="images/image-product-4-thumbnail.jpg" alt="fourth thumbnail image"/>
+      </div>
+      <!-- close:-> thumbnail images for large and larger screens only-->
+
+
+
+      <img onclick="imageRotator(-1)" class="lg:hidden absolute bottom-44 hover:cursor-pointer md:left-20 lg:left-32" src="images/icon-previous.svg" alt="icon of previous"/>   
+      <img onclick="imageRotator(1)" class="lg:hidden absolute bottom-44 right-0 hover:cursor-pointer md:right-20 lg:right-32" src="images/icon-next.svg" alt="icon of previous"/> 
     </div>
 
-    <div class="px-8">
-      <p class="text-orange-600 uppercase text-sm font-bold mt-8">Sneaker Company</p>
-      <h1 class="text-3xl font-bold mt-8">Fall Limited Edition Sneakers</h1>
-      <p class="mt-8 text-grayish-blue ">
+    <div class="px-8  lg:w-1/2">
+      <p class="text-orange-600 uppercase text-sm font-bold mt-8 lg:mt-6">Sneaker Company</p>
+      <h1 class="text-3xl font-bold mt-8 lg:mt-3">Fall Limited Edition Sneakers</h1>
+      <p class="mt-8 lg:mt-5 text-grayish-blue ">
         These low-profile sneakers are your perfect casual wear companion. Featuring a 
         durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
       
-      <div class="flex mt-8  max-w-sm mx-auto">
-        <div class=" w-10/12">
+      <div class="flex mt-8  max-w-sm mx-auto lg:w-full lg:flex-wrap">
+        <div class=" w-10/12 lg:flex lg:items-center">
           <span class=" text-3xl font-bold">$125.00</span>
           <span class="text-orange-600 bg-orange-200  ml-6 px-1.5 align-super rounded-md font-bold">50%</span>
         </div>
-        <div class="self-end">
-          <span class="p-4 text-right line-through"> $250.00</span>
+        
+        <div class="self-end lg:block lg:w-5/12">
+          <span class="p-4 lg:pl-0 text-right line-through"> $250.00</span>
         </div>
       </div>
     
-      <div class="bg-gray-100 max-w-sm mx-auto py-2 px-4 rounded-xl flex justify-between items-center mt-8">
+      <div class="lg:flex lg:items-center">
+      <div class="bg-gray-100 lg:w-4/12 max-w-sm mx-auto  py-2 px-4 lg:rounded-lg rounded-xl flex justify-between items-center mt-8 lg:mt-4">
         <img class="hover:cursor-pointer" src="images/icon-minus.svg" alt="icon of minus" onclick="countItems(-1)"/>
         <p class="font-semibold text-lg" id="totalSneakers">0</p>
         <img class="hover:cursor-pointer" src="images/icon-plus.svg" alt="icon of plus"  onclick="countItems(1)"/>
       </div>
 
-      <div onclick="addToCart()"  class="bg-orange-600 max-w-sm mx-auto py-2 px-4 rounded-xl flex justify-center items-center mt-4 text-white hover:cursor-pointer">
+      <div onclick="addToCart()"  class="bg-orange-600 lg:w-7/12 max-w-sm mx-auto py-2 px-4 rounded-xl lg:rounded-lg flex justify-center items-center mt-4 text-white hover:cursor-pointer hover:opacity-50">
         <img src="images/icon-cartWhite.svg" alt="icon of cartWhite"/>
         <p  class="font-semibold text-lg pl-8 hover:cursor-pointer">Add to cart</p>
       </div>
     </div>
+    </div>
+  </div>
   </main>
 
   <br/>
@@ -135,6 +201,8 @@ font-family: 'Open Sans', sans-serif;
     Coded by <a href="#">Today more</a>.
   </div>
 </div>
+
+
 <script src="code.js"></script>
 </body>
 </html>
