@@ -206,7 +206,7 @@ function thumbnailEffect(x)
 //open lightbox when user clicks on central image make background opacityed
 function lightBox()
 {
-  alert("lightbox");
+  
    document.getElementById("whole").style.opacity="0.3";
    
    document.getElementById("lightboxAppear").style.display="block";
@@ -215,7 +215,7 @@ function lightBox()
 
 function closeLightBox()
 {
-  alert("lightboxclose");
+ 
    document.getElementById("whole").style.opacity="1";
    
    document.getElementById("lightboxAppear").style.display="none";
