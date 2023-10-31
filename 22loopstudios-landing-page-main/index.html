@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./output.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+ 
+    <!--menu bar-->
+   <div id="menu" class="hidden border-2 w-screen bg-black text-white pt-12">
+
+        <div class="w-9/12 mx-auto flex justify-between">
+            <img   src="./images/logo.svg" alt="image of logo"/> 
+            <img onclick="menu(0)" class="h-5 mt-2 hover:cursor-pointer"  src="./images/icon-close.svg" alt="icon of close"/>
+        </div>
+        <ul class="w-9/12 mx-auto space-y-6 mt-32 mb-24 text-4xl font-josefinSans ">
+          <li class="shortCenterUnderline text-white text-left mx-0">About</li>
+          <li class="shortCenterUnderline text-white text-left mx-0" >Careers</li>
+          <li class="shortCenterUnderline text-white text-left mx-0" >Events</li>
+          <li class="shortCenterUnderline text-white text-left mx-0" >Products</li>
+          <li class="shortCenterUnderline text-white text-left mx-0" >Support</li>
+        </ul>
+      
+      </div>
+      <!--end of menu bar-->
+
+
+      <!--we assign wholePage id to this div so that whole page disappear
+          when user click to open menu-->
+    <div id="wholePage" class="font-josefinSans"> <!--outer container start-->
+
+      <div class="bg-[url('./images/mobile/image-hero.jpg')] bg-[length:99.99%_650px] bg-no-repeat  h-[650px]
+                  lg:bg-[url('./images/desktop/image-hero.jpg')]  ">
+         
+        <div class="w-9/12 mx-auto pt-10 lg:pt-20 flex justify-between">
+            <img class="inline-block h-8 " src="./images/logo.svg" alt="icon of Loopstudios"/>     
+      
+            <img onclick="menu(1)" class="inline-block h-5  lg:hidden" src="./images/icon-hamburger.svg"  alt="icon of menuBar"/>
+
+            <!-- below unordered list for desktop view only-->
+            <ul class="hidden lg:block text-sm font-alata space-x-2 mt-1 text-white">
+              <li class="inline-block shortCenterUnderline">About</li>
+              <li class="inline-block shortCenterUnderline">Careers</li>
+              <li class="inline-block shortCenterUnderline">Events</li>
+              <li class="inline-block shortCenterUnderline">Products</li>
+              <li class="inline-block shortCenterUnderline">Support</li>
+            </ul>
+           <!-- above unordered list for desktop view only-->
+         </div>
+
+
+        <div class="w-9/12 mx-auto">
+        <h1 class="text-white uppercase text-4xl border-4 font-josefinSans px-8 max-w-xs lg:max-w-md mx-auto lg:mx-0 lg:text-5xl lg:py-7 mt-36">Immersive experiences that deliver</h1>
+      </div> 
+      </div> <!--bg hero-image-->
+
+      <!--VR for sm and md screen only-->
+       <div class="lg:hidden w-9/12 mx-auto mt-40"> 
+        <img class="mx-auto" src="./images/mobile/image-interactive.jpg" alt="image of using VR gadget" />
+        <h1 class="uppercase text-4xl max-w-xs font-josefinSans mx-auto mt-20">The leader in interactive VR</h1>
+        <p class="text-gray-600 font-alata max-w-xs mx-auto text-center mt-16">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.</p>
+       </div><!--VR-->
+
+
+       <!--for desktop/lg screen-->
+       <div class="hidden lg:block lg:relative w-9/12 mx-auto mt-40"> 
+        <div class="absolute right-0 bottom-0 pl-24 pt-20 bg-white">
+          <h1 class="uppercase text-3xl  max-w-xs font-josefinSans">The leader in interactive VR</h1>
+          <p class="text-gray-600 font-alata max-w-xs  text-left text-xs mt-8">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+            projects for some of the best companies around the globe. Our award-winning 
+            creations have transformed businesses through digital experiences that bind 
+            to their brand.</p>
+        </div>
+        <img class="w-2/3" src="./images/desktop/image-interactive.jpg" alt="image of using VR gadget" />
+        </div><!--VR-->
+
+       <div class="w-9/12 mx-auto mt-32"> <!--start of "our creation"-->
+           <h1 class="lg:hidden uppercase text-4xl max-w-xs font-josefinSans mx-auto">Our creations</h1>
+
+           <div class="lg:hidden space-y-7 mt-[56px] "> <!-- Start images collection-->
+          <div class="relative max-w-2xl mx-auto">
+            <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">deep <br/> earth</h1>
+            <img src="./images/mobile/image-deep-earth.jpg" alt="image of deep earth"/>
+          </div>
+          <div class="relative  max-w-2xl mx-auto">
+            <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">night <br/> arcade</h1>
+            <img src="./images/mobile/image-night-arcade.jpg" alt="image of night arcade"/>
+         </div>
+          <div class="relative  max-w-2xl mx-auto">
+            <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">soccer <br/> team vr</h1>
+            <img src="./images/mobile/image-soccer-team.jpg"  alt="image of soccer team"/>
+          </div>
+          
+          <div class="relative  max-w-2xl mx-auto">
+            <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">the <br/> grid</h1>
+            <img src="./images/mobile/image-grid.jpg" alt="image of grid"/>
+        </div>
+        <div class="relative  max-w-2xl mx-auto">
+          <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">from up<br/> above vr</h1>
+          <img src="./images/mobile/image-from-above.jpg" alt="image of from above"/>
+       </div>
+       <div class="relative  max-w-2xl mx-auto">
+        <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">pocket <br/> borealis</h1>
+        <img src="./images/mobile/image-pocket-borealis.jpg" alt="image of pocket borealis"/>
+      </div>  
+       <div class="relative  max-w-2xl mx-auto">
+        <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">the <br/> curiosity</h1>
+        <img src="./images/mobile/image-curiosity.jpg" alt="image of showing curiosity"/>
+        </div>
+       <div class="relative  max-w-2xl mx-auto">
+        <h1 class="absolute left-8 bottom-8 uppercase text-white text-3xl max-w-xs font-josefinSans">make it <br/> fisheye</h1>
+        <img src="./images/mobile/image-fisheye.jpg"  alt="image of view from fish eye"/>
+      </div>
+
+           </div><!-- end of images collection-->
+
+
+           <h2 class="lg:hidden uppercase text-3xl border-2 w-64 px-16 py-3.5 pt-5 mx-auto mt-16 border-black hover:cursor-pointer hover:bg-black hover:text-white"> See all</h2>
+          <!--we need to copy this above div because mobile & desktop view images are different so one div contains mobile view images and other desktop-->
+          <div class="hidden lg:flex justify-between">
+            <h1 class="uppercase text-4xl max-w-sm font-josefinSans mt-2">Our creations</h1>
+            <h2 class="uppercase text-sm border-2 p-2 px-7 pt-4 border-black hover:cursor-pointer hover:bg-black hover:text-white"> See all</h2>
+         
+          </div>
+          <div class="hidden lg:grid grid-cols-4 gap-7 mt-[56px] "> <!-- Start images collection-->
+      <div class="relative max-w-2xl mx-auto">
+        <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSan hover:bg-opacity-40 hover:cursor-pointer">deep <br/> earth</h1>
+        <img class="hover:cursor-pointer hover:opacity-40" class="" src="./images/desktop/image-deep-earth.jpg" alt="image of deep earth"/>
+      </div>
+      <div class="relative  max-w-2xl mx-auto">
+        <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSans">night <br/> arcade</h1>
+        <img class="hover:cursor-pointer hover:opacity-40"  src="./images/desktop/image-night-arcade.jpg" alt="image of night arcade"/>
+     </div>
+      <div class="relative  max-w-2xl mx-auto">
+        <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSans">soccer <br/> team vr</h1>
+        <img class="hover:cursor-pointer hover:opacity-40"  src="./images/desktop/image-soccer-team.jpg"  alt="image of soccer team"/>
+      </div>
+      
+      <div class="relative  max-w-2xl mx-auto">
+        <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSans">the <br/> grid</h1>
+        <img class="hover:cursor-pointer hover:opacity-40"  src="./images/desktop/image-grid.jpg" alt="image of grid"/>
+    </div>
+    <div class="relative  max-w-2xl mx-auto">
+      <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSans">from up<br/> above vr</h1>
+      <img class="hover:cursor-pointer hover:opacity-40"  src="./images/desktop/image-from-above.jpg" alt="image of from above"/>
+   </div>
+   <div class="relative  max-w-2xl mx-auto">
+    <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSans">pocket <br/> borealis</h1>
+    <img class="hover:cursor-pointer hover:opacity-40"  src="./images/desktop/image-pocket-borealis.jpg" alt="image of pocket borealis"/>
+  </div>  
+   <div class="relative  max-w-2xl mx-auto">
+    <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSans">the <br/> curiosity</h1>
+    <img class="hover:cursor-pointer hover:opacity-40" src="./images/desktop/image-curiosity.jpg" alt="image of showing curiosity"/>
+    </div>
+   <div class="relative  max-w-2xl mx-auto">
+    <h1 class="absolute left-8 bottom-8 uppercase text-white text-2xl max-w-xs font-josefinSans">make it <br/> fisheye</h1>
+    <img class="hover:cursor-pointer hover:opacity-40"  src="./images/desktop/image-fisheye.jpg"  alt="image of view from fish eye"/>
+  </div>
+
+          </div><!-- end of images collection-->    
+       </div><!--end of "our creation"-->
+
+
+       <!--i stop here, copy stuff from top as it is same pattern-->
+      <footer class=" mt-32 py-20 w-full bg-black text-white font-alata">
+
+        <div class="lg:flex justify-between lg:w-9/12 lg:mx-auto "><!--created this extra div only for lg screens -->
+        <div class="text-center lg:text-left">
+
+          <img class="mx-auto lg:mx-0" src="./images/logo.svg" alt="image of logo"/> 
+          <ul class="space-y-6 mt-8 text-lg
+                     lg:block lg:text-sm lg:font-alata lg:space-x-4 lg:mt-1">
+            <li class="lg:inline-block shortCenterUnderline">About</li>
+            <li class="lg:inline-block shortCenterUnderline">Careers</li>
+            <li class="lg:inline-block shortCenterUnderline">Events</li>
+            <li class="lg:inline-block shortCenterUnderline">Products</li>
+            <li class="lg:inline-block shortCenterUnderline">Support</li>
+          </ul>
+        </div>
+        <div class="mt-8 lg:mt-0 max-w-sm mx-auto lg:mx-0 ">
+          <div class="flex justify-center lg:justify-end space-y-reverse space-x-4">
+            <img class="hover:border-b-2 pb-1" src="./images/icon-facebook.svg" alt="icon of facebook"/>
+            <img class="hover:border-b-2 pb-1" src="./images/icon-twitter.svg" alt="icon of twitter"/>
+            <img class="hover:border-b-2 pb-1" src="./images/icon-pinterest.svg" alt="icon of pinterest"/>
+            <img class="hover:border-b-2 pb-1" src="./images/icon-instagram.svg" alt="icon of instagram"/>
+          </div>
+ 
+          <p class="mt-10 lg:mt-9 text-gray-500 text-lg lg:text-sm text-center">© 2021 Loopstudios. All rights reserved.</p>
+
+        </div>
+        </div><!--created this extra div only for lg screens -->
+      </footer> 
+    </div> <!--outer container end-->
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Today More</a>.
+  </div>
+
+  <script src="./magic.js"></script>
+</body>
+</html>
