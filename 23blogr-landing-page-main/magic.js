@@ -49,7 +49,7 @@ function menuSubOptions(x)
     if(x==0)
     {
 
-        alert("i am okay, problem with id");
+    
         document.getElementById("menu1").style.display = "block";
         document.getElementById("CloseSubMenu1").style.display = "flex";
         document.getElementById("OpenSubMenu1").style.display = "none";
