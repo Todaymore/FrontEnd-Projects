@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css"/>
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  
+
+  <main>
+    <div class="font-ubuntu"><!--outer div-->
+
+
+      <div id="menuExpand" class="relative hidden"> <!--MENU FOR MOBILE created this div just to give relative position value-->    
+        <div  class="  absolute h-[610px]  border-2 bg-white w-10/12  inset-0 mx-auto  mt-20 pt-8 rounded-lg"> <!--mobile menu-->
+
+        <div class="w-11/12 mx-auto text-center font-ubuntu ">
+          <div id="OpenSubMenu1" onclick="menuSubOptions(0)" class="flex justify-center items-center  hover:cursor-pointer">
+            <p class="text-lg mr-1.5">Product</p>
+            <img src="./images/icon-arrow-dark.svg" alt="icon of drop down"/>
+          </div>
+    
+          <div id="CloseSubMenu1" onclick="menuSubOptions(1)" class="hidden justify-center items-center  hover:cursor-pointer">
+            <p class="text-lg mr-1.5">Product</p>
+            <img class="h-2" src="./images/icon-arrow-up.svg" alt="icon of drop down"/>
+          </div>
+    
+            <ol id="menu1" class="hidden mt-6 py-6 space-y-2 border-2 bg-gray-200 rounded-md">
+            <li>Overview</li>
+            <li>Pricing</li>
+            <li>Marketplace</li>
+            <li>Features</li>
+            <li>Integrations</li>
+          </ol> 
+        </div>
+    
+        <div class="w-10/12 mx-auto mt-8 text-center font-ubuntu">
+          <div id="OpenSubMenu2" onclick="menuSubOptions2(0)" class="flex justify-center items-center  hover:cursor-pointer">
+            <p class="text-lg mr-1.5">Company</p>
+            <img src="./images/icon-arrow-dark.svg" alt="icon of drop down"/>
+          </div>
+    
+          <div id="CloseSubMenu2" onclick="menuSubOptions2(1)" class="hidden justify-center items-center  hover:cursor-pointer">
+            <p class="text-lg mr-1.5">Company</p>
+            <img class="h-2" src="./images/icon-arrow-up.svg" alt="icon of drop down"/>
+          </div>
+    
+            <ol id="menu2" class="hidden mt-6 py-6 space-y-2 border-2 bg-gray-200 rounded-md">
+            <li> About</li>
+            <li>Team</li>
+            <li>Blog</li>
+          </ol> 
+        </div>
+    
+        <div class="w-10/12 mx-auto mt-8 text-center font-ubuntu">
+          <div id="OpenSubMenu3" onclick="menuSubOptions3(0)" class="flex justify-center items-center  hover:cursor-pointer">
+            <p class="text-lg mr-1.5">Connect</p>
+            <img src="./images/icon-arrow-dark.svg" alt="icon of drop down"/>
+          </div>
+    
+          <div id="CloseSubMenu3" onclick="menuSubOptions3(1)" class="hidden justify-center items-center  hover:cursor-pointer">
+            <p class="text-lg mr-1.5">Connect</p>
+            <img class="h-2" src="./images/icon-arrow-up.svg" alt="icon of drop down"/>
+          </div>
+    
+            <ol id="menu3" class="hidden mt-6 py-6 space-y-2 border-2 bg-gray-200 rounded-md">
+            <li>Contact</li>
+            <li>Newsletter</li>
+            <li>LinkedIn</li>
+          </ol> 
+        </div>
+    
+        <div class="w-10/12 border-t-2 mx-auto mt-12 text-center font-ubuntu">
+          <button class="block text-center border-[1px] border-white px-3 py-1 mx-auto 
+           rounded-3xl text-gray-800 font-medium bg-white mt-5" type="submit">Login</button>
+          <button class="block text-center  text-white  bg-gradient-to-r from-[#FF896F] to-[#FE4E5B]  mt-5 px-5 py-1.5 mx-auto
+           rounded-3xl font-medium" type="submit">Sign Up</button>       
+        </div>
+    
+      
+        </div> 
+      </div><!--end of mobile menu-->
+
+
+       <div class="bg-gradient-to-br  from-[#FE7668] to-[#FF4D5B] rounded-bl-[200px]"><!--we create this div because we wanted to apply gradient color and bg image and as we did not apply it to same div so i apply gradient to it and bg image to its only child-->
+        <div class="h-auto bg-cover bg-center    bg-[url('./images/bg-pattern-intro-mobile.svg')] bg-no-repeat mb-20 ">                   
+        <div class="w-10/12 mx-auto pt-10 flex justify-between lg:justify-start">
+          <img src="./images/logo.svg" alt="icon of logo"/>
+          <img id="hamburger" onclick="openMenu(1)" class="lg:hidden h-5 mt-2.5 hover:cursor-pointer" src="./images/icon-hamburger.svg" alt="icon of menu"/>
+          <img id="closeIcon" onclick="openMenu(0)" class="hidden lg:hidden h-5 mt-2.5 hover:cursor-pointer" src="./images/icon-close.svg" alt="icon of menu"/>
+          
+          
+          <div class="hidden lg:block relative"> <!--for large screen-->
+
+           <div class="flex text-white absolute ml-16 space-x-8">
+            <div class="text-center font-ubuntu">
+              <div id="OpenSubMenu11" onclick="menuSubOptions(0)" class="flex justify-center items-center  hover:cursor-pointer">
+                <p class="text-lg mr-1.5 hover:underline">Product</p>
+                <img src="./images/icon-arrow-dark-White.svg" alt="icon of drop down"/>
+            </div>
+        
+              <div id="CloseSubMenu11" onclick="menuSubOptions(1)" class="hidden justify-center items-center  hover:cursor-pointer">
+                <p class="text-lg mr-1.5 hover:underline">Product</p>
+                <img class="h-2" src="./images/icon-arrow-up-White.svg" alt="icon of drop down"/>
+              </div>
+        
+                <ol id="menu11" class="hidden mt-6 py-6 px-4 space-y-2 border-2 text-gray-800 bg-white rounded-md">
+                <li class=" hover:font-medium hover:cursor-pointer">Overview</li>
+                <li class=" hover:font-medium hover:cursor-pointer">Pricing</li>
+                <li class=" hover:font-medium hover:cursor-pointer">Marketplace</li>
+                <li class=" hover:font-medium hover:cursor-pointer">Features</li>
+                <li class=" hover:font-medium hover:cursor-pointer">Integrations</li>
+              </ol> 
+            </div>
+            
+            <div class="text-center font-ubuntu">
+              <div id="OpenSubMenu22" onclick="menuSubOptions2(0)" class="flex justify-center items-center  hover:cursor-pointer">
+                <p class="text-lg mr-1.5 hover:underline">Company</p>
+                <img src="./images/icon-arrow-dark-White.svg" alt="icon of drop down"/>
+              </div>
+        
+              <div id="CloseSubMenu22" onclick="menuSubOptions2(1)" class="hidden justify-center items-center  hover:cursor-pointer">
+                <p class="text-lg mr-1.5 hover:underline">Company</p>
+                <img class="h-2" src="./images/icon-arrow-up-White.svg" alt="icon of drop down"/>
+              </div>
+        
+                <ol id="menu22" class="hidden mt-6 py-6 px-4 space-y-2 border-2 text-gray-800 bg-white rounded-md">
+                <li class=" hover:font-medium hover:cursor-pointer"> About</li>
+                <li class=" hover:font-medium hover:cursor-pointer">Team</li>
+                <li class=" hover:font-medium hover:cursor-pointer">Blog</li>
+              </ol> 
+            </div>
+        
+            <div class="text-center font-ubuntu">
+              <div id="OpenSubMenu33" onclick="menuSubOptions3(0)" class="flex justify-center items-center  hover:cursor-pointer">
+                <p class="text-lg mr-1.5 hover:underline">Connect</p>
+                <img src="./images/icon-arrow-dark-White.svg" alt="icon of drop down"/>
+              </div>
+        
+              <div id="CloseSubMenu33" onclick="menuSubOptions3(1)" class="hidden justify-center items-center  hover:cursor-pointer">
+                <p class="text-lg mr-1.5 hover:underline">Connect</p>
+                <img class="h-2" src="./images/icon-arrow-up-White.svg" alt="icon of drop down"/>
+              </div>
+        
+                <ol id="menu33" class="hidden mt-6 py-6 px-4 space-y-2 border-2 text-gray-800 bg-white rounded-md">
+                <li class=" hover:font-medium hover:cursor-pointer" >Contact</li>
+                <li class=" hover:font-medium hover:cursor-pointer">Newsletter</li>
+                <li class=" hover:font-medium hover:cursor-pointer">LinkedIn</li>
+              </ol> 
+            </div>
+
+            <div class="w-[440px] max-h-8 -mt-1.5 relative flex justify-end text-center font-ubuntu">
+              <button class=" block w-16 text-center rounded-3xl text-white font-medium 
+                              hover:cursor-pointer" type="submit">Login</button>
+              <button class="block w-32 py-1.5 ml-8 text-center bg-white text-[#FE4E5B] rounded-3xl font-medium
+                              hover:cursor-pointer hover:bg-[#FE4E5B] hover:text-white" type="submit">Sign Up</button>       
+            </div>
+            </div>
+          </div> <!--only appears for large screens-->
+
+
+           </div>
+          </div>
+          <div class="text-white max-w-[330px] lg:max-w-lg  mx-auto mt-24 text-center pb-32">
+            <h1 class="text-4xl">A modern publishing platform</h1>
+            <p class="mt-8">Grow your audience and build your online brand
+            </p>
+            <button class="inline-block border-[1px] border-white px-3 py-1 rounded-3xl
+                         text-[#FE4E5B] font-medium bg-white mt-10 hover:cursor-pointer hover:bg-[#FE4E5B] hover:text-white" type="submit">Start for Free</button>
+            <button class="inline-block border-[1px] border-white px-3 py-1
+                          rounded-3xl font-medium ml-4 hover:cursor-pointer hover:bg-white hover:text-[#FE4E5B]" type="submit">Learn More</button>       
+          </div>
+        </div>
+       
+        
+       
+
+       <div class="font-overpass mt-20 max-w-md lg:max-w-full mx-auto text-center
+                   lg:mt-36">
+        <h2 class="text-2xl font-semibold">Designed for the future</h2>
+        <img  class="mt-10 mx-auto lg:hidden" src="./images/illustration-editor-mobile.svg" alt="icon of editor-mobile"/>
+
+
+        <div class="lg:flex lg:items-start lg:justify-between"><!-- created this div tag for large screen sizes-->
+          <div class="lg:max-w-md lg:ml-20">
+          <div class="w-10/12 mx-auto">
+            <h2 class="text-2xl pt-10 font-semibold">Introducing an <br/> extensible editor</h2>
+            <p class="pt-4">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+              change the looks of a blog.</p>
+          </div>
+          <div class="w-10/12 mx-auto">
+            <h2 class="text-2xl pt-10 font-semibold">Robust content management</h2>
+            <p class="pt-4"> Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+            </p>
+          </div>
+          </div>
+          <img  class="absolute -right-0 w-[500px] mx-auto hidden lg:block" src="./images/illustration-editor-mobile.svg" alt="icon of editor-mobile"/>
+  
+        </div><!--for large screen sizes-->
+        
+       </div>
+
+                                                                                 
+       <div class="relative mx-auto text-center font-overpass text-white bg-[#3C3F60] bg-[url('./images/bg-pattern-circles.svg')] bg-cover bg-[center_top_-10rem] bg-no-repeat rounded-bl-[200px] rounded-tr-[200px] py-32 mt-80
+                   lg:flex lg:justify-center lg:mt-24 lg:py-4">
+        <img class="lg:hidden max-w-md absolute -top-56 inset-0 mx-auto" src="./images/illustration-phones.svg" alt="icon of illustration of operation phones"/>
+        <img class="hidden lg:block max-w-md -mt-16 ml-20" src="./images/illustration-phones.svg" alt="icon of illustration of operation phones"/>
+        
+        <div class="w-10/12 lg:max-w-md  lg:text-left mx-auto mt-20">
+          <h2 class="text-3xl pt-10 font-semibold">State of the Art Infrastructure</h2>
+          <p class="pt-4">  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
+       </div>
+
+       <div class="font-overpass max-w-md mx-auto text-center mt-24
+                   lg:flex lg:items-start lg:justify-between lg:max-w-full">
+        <img  class="mt-10 mx-auto lg:mx-0 lg:relative lg:w-[700px]" src="./images/illustration-laptop-desktop.svg" alt="icon of editor-mobile"/>
+        <div class="lg:text-left lg:max-w-md"> <!--only created for large screen-->
+          <div class="w-10/12 mx-auto">
+            <h2 class="text-2xl pt-10 font-semibold">Free, open, simple</h2>
+            <p class="pt-4">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+              change the looks of a blog.</p>
+          </div>
+          <div class="w-10/12 mx-auto">
+            <h2 class="text-2xl pt-10 font-semibold">Powerful tooling</h2>
+            <p class="pt-4">Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.       
+            </p>
+          </div>
+        </div><!--created this div only for large screens-->
+
+       </div>
+       
+
+       <div class=" mt-20 py-20 bg-[#24242C] rounded-tr-[200px] text-center text-white
+                   lg:flex lg:items-start">
+        <img class="mx-auto" src="images/logo.svg" alt="icon of logo"/>
+        <div class="mx-auto mt-16 lg:mt-0 text-center">
+          <h3>Products</h3>
+          <div class="space-y-1 text-gray-300">
+          <p class="mt-6 hover:underline hover:cursor-pointer" >Overview</p>
+          <p class="hover:underline hover:cursor-pointer" >Pricing</p>
+          <p class="hover:underline hover:cursor-pointer">Marketplace</p>
+          <p class="hover:underline hover:cursor-pointer">Features</p>
+          <p class="hover:underline hover:cursor-pointer">Integrations</p>
+        </div>
+        </div>
+       
+
+        <div class="mx-auto mt-16 lg:mt-0 text-center">
+          <h3>Company</h3>
+          <div class="space-y-1 text-gray-300">
+          <p class="mt-6 hover:underline hover:cursor-pointer">About</p>
+          <p class="hover:underline hover:cursor-pointer">Team</p>
+          <p class="hover:underline hover:cursor-pointer">Blog</p>
+          <p class="hover:underline hover:cursor-pointer">Careers</p>
+        </div>
+        </div>
+
+        <div class="mx-auto mt-16 lg:mt-0 text-center">
+          <h3>Connect</h3>
+          <div class="space-y-1 text-gray-300">
+          <p class="mt-6 hover:underline hover:cursor-pointer">Contact</p>
+          <p class="hover:underline hover:cursor-pointer">Newsletter</p>
+          <p class="hover:underline hover:cursor-pointer">LinkedIn</p>
+        </div>
+        </div>
+       </div>
+
+
+    </div><!--outer div-->
+  </main>
+
+<!--
+  Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+Company
+
+  About
+  Team
+  Blog
+  Careers
+  
+
+  Connect
+
+  Contact
+  Newsletter
+  LinkedIn
+  
+  Login
+  Sign Up
+
+  A modern publishing platform
+  Grow your audience and build your online brand
+
+  Start for Free
+  Learn More
+
+  Designed for the future
+
+  Introducing an extensible editor
+  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+  change the looks of a blog.
+
+  Robust content management
+  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+
+  State of the Art Infrastructure
+  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+
+  Free, open, simple
+  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+
+  Powerful tooling
+  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.
+
+  Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+  
+  Contact
+  Newsletter
+  LinkedIn
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  -->
+
+  <script src="./magic.js"></script>
+</body>
+</html>
