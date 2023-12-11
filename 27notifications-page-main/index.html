@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css"/>
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body>
+  <!--outer container-->
+<div class="w-11/12 lg:w-9/12 mx-auto font-Jakarta">
+  <!--div 'A' begin-->
+  <div class="flex justify-between mt-4">
+    <!--div 'A.1' -->
+    <div class="text-2xl">
+      <h1 class="font-extrabold inline-block">Notifications</h1>
+      <p id="numOfNotifications" class="inline-block bg-blue-900 w-fit text-xl px-2.5 rounded-md text-white ">3</p>
+    </div><!--div 'A.1' closed-->
+    <button id="markedAll" onclick="marked()"  class="text-gray-400 
+                                     hover:text-blue-900 hover:cursor-pointer">Mark all as read</button>
+  </div><!--div 'A' closed-->
+
+  <!--div 'B' begins-->
+
+  <div>
+    <!--div 'B.1' begins-->
+    <div class="unread bg-[#F6FAFD] flex items-start rounded-xl mt-4 mb-6 p-4">
+      <img class="h-10 mt-1" src="./assets/images/avatar-mark-webber.webp" alt="image of user Mark Webber"/>
+      <!--div 'B.1.i'-->
+      <div class="ml-4">
+        <h3 class="font-extrabold inline-block  hover:text-blue-900 hover:cursor-pointer">Mark Webber</h3>
+        <p class="text-gray-400 inline-block">reacted to your recent post</p>
+        <p class="text-gray-600 inline-block font-extrabold  hover:text-blue-900 hover:cursor-pointer">My first tournament today! <span class="inline-block w-2 h-2 border-4 border-red-600 bg-red-600 rounded-full mb-0.5 ml-1"></span>  </p> 
+        <p class="text-gray-300">1m ago</p>
+      </div><!--div 'B.1.i closed'-->
+    </div><!--div 'B.1' closed-->
+
+    <!--div 'B.2' begins-->
+    <div class="unread bg-[#F6FAFD] flex items-start rounded-xl mt-4 p-4">
+      <img class="h-10 mt-1" src="./assets/images/avatar-angela-gray.webp" alt="image of user Angela Gray"/>
+      <!--div 'B.2.i'-->
+      <div class="ml-4">
+        <h3 class="font-extrabold inline-block  hover:text-blue-900 hover:cursor-pointer">Angela Gray</h3>
+        <p class="text-gray-400 inline-block">followed you <span class="inline-block w-2 h-2 border-4 border-red-600 bg-red-600 rounded-full  mb-0.5 ml-1"></span></p>
+        <p class="text-gray-300">5m ago</p>
+      </div><!--div 'B.2.i closed'-->
+    </div><!--div 'B.2' closed-->
+
+    <!--div 'B.3' begins-->
+    <div class="bg-[#F6FAFD] flex items-start rounded-xl mt-4 p-4">
+      <img class="h-10 mt-1" src="./assets/images/avatar-jacob-thompson.webp" alt="image of user Jacob Thompson"/>
+      <!--div 'B.3.i'-->
+      <div class="ml-4">
+        <h3 class="font-extrabold inline-block hover:text-blue-900 hover:cursor-pointer">Jacob Thompson</h3>
+        <p class="text-gray-400 inline-block">has joined your group</p>
+        <p class="text-blue-900 inline-block font-extrabold hover:text-blue-900 hover:cursor-pointer">Chess Club <span class="inline-block w-2 h-2 border-4 border-red-600 bg-red-600 rounded-full  mb-0.5 ml-1"></span>  </p> 
+        <p class="text-gray-300">1 day ago</p>
+
+      </div><!--div 'B.3.i closed'-->
+    </div><!--div 'B.3' closed-->
+
+     <!--div 'B.4' begins-->
+     <div class="flex items-start rounded-xl mt-4 p-4">
+      <img class="h-10 mt-1" src="./assets/images/avatar-rizky-hasanuddin.webp" alt="image of user Rizky Hasanuddin"/>
+      <!--div 'B.4.i'-->
+      <div class="ml-4">
+        <h3 class="font-extrabold inline-block  hover:text-blue-900 hover:cursor-pointer">Rizky Hasanuddin</h3>
+        <p class="text-gray-400 inline-block">sent you a private message</p>
+        <p class="text-gray-300">5 days ago</p>
+        <p class="text-gray-400 inline-block border rounded-lg p-2 mt-2 hover:bg-blue-100 hover:cursor-pointer">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+          I'm already having lots of fun and improving my game.
+        </p>
+      </div><!--div 'B.4.i closed'-->
+    </div><!--div 'B.4' closed-->
+
+    <!--div 'B.5' begins-->
+    <div class="relative flex items-start rounded-xl mt-4 p-4">
+      <img class="h-10 mt-1" src="./assets/images/avatar-kimberly-smith.webp" alt="image of user Kimberly Smith"/>
+      <!--div 'B.5.i'-->
+      <div class="ml-4">
+        <h3 class="font-extrabold inline-block hover:text-blue-900 hover:cursor-pointer">Kimberly Smith</h3>
+        <p class="text-gray-400 inline-block">commented on your picture</p> 
+        <p class="text-gray-300">1 week ago</p>
+      </div><!--div 'B.5.i closed'-->
+      <img class="h-10 mt-1 ml-2.5 block
+                  lg:absolute right-4 hover:border-2 hover:cursor-pointer rounded-lg" src="./assets/images/image-chess.webp" alt="image of user's self uploaded image"/>
+    </div><!--div 'B.5' closed-->
+
+    <!--div 'B.6' begins-->
+    <div class="flex items-start rounded-xl mt-4 p-4">
+      <img class="h-10 mt-1" src="./assets/images/avatar-nathan-peterson.webp" alt="image of user Nathan Peterson"/>
+      <!--div 'B.6.i'-->
+      <div class="ml-4">
+        <h3 class="font-extrabold inline-block hover:text-blue-900 hover:cursor-pointer">Nathan Peterson</h3>
+        <p class="text-gray-400 inline-block">reacted to your recent post</p>
+        <p class="text-gray-600 inline-block font-extrabold hover:text-blue-900 hover:cursor-pointer">5 end-game strategies to increase your win rate</p> 
+        <p class="text-gray-300">2 weeks ago</p>
+      </div><!--div 'B.6.i closed'-->
+    </div><!--div 'B.6' closed-->
+
+     <!--div 'B.7' begins-->
+     <div class="flex items-start rounded-xl mt-4 p-4">
+      <img class="h-10 mt-1" src="./assets/images/avatar-anna-kim.webp" alt="image of user Anna Kim"/>
+      <!--div 'B.7.i'-->
+      <div class="ml-4">
+        <h3 class="font-extrabold inline-block hover:text-blue-900 hover:cursor-pointer">Anna Kim</h3>
+        <p class="text-gray-400 inline-block">left the group</p>
+        <p class="text-blue-900 inline-block font-extrabold hover:text-blue-900 hover:cursor-pointer">Chess Club </p> 
+        <p class="text-gray-300">2 weeks ago</p>
+      </div><!--div 'B.7.i closed'-->
+    </div><!--div 'B.7' closed-->
+
+  </div><!--div 'B' closed-->
+</div><!--outer container closed-->
+  <!--
+Notifications 3
+  Mark all as read
+
+  Mark Webber reacted to your recent post My first tournament today!
+  1m ago
+
+  Angela Gray followed you
+  5m ago
+
+  Jacob Thompson has joined your group Chess Club
+  1 day ago
+
+  Rizky Hasanuddin sent you a private message
+  5 days ago
+  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+  I'm already having lots of fun and improving my game.
+
+  Kimberly Smith commented on your picture
+  1 week ago
+
+  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
+  2 weeks ago
+
+  Anna Kim left the group Chess Club
+  2 weeks ago
+  -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Today More</a>.
+  </div>
+  <script src="./magic.js"></script>
+</body>
+</html>
